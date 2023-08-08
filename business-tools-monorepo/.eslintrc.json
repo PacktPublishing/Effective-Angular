@@ -17,8 +17,8 @@
                 "onlyDependOnLibsWithTags": ["domain:finance", "domain:shared"]
               },
               {
-                "sourceTag": "domain:hr",
-                "onlyDependOnLibsWithTags": ["domain:hr", "domain:shared"]
+                "sourceTag": "domain:marketing",
+                "onlyDependOnLibsWithTags": ["domain:marketing", "domain:shared"]
               },
               {
                 "sourceTag": "domain:crm",
