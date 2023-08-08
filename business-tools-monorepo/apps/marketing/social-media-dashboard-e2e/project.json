@@ -1,0 +1,35 @@
+{
+  "name": "marketing-social-media-dashboard-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/marketing/social-media-dashboard-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/marketing/social-media-dashboard-e2e/cypress.config.ts",
+        "devServerTarget": "marketing-social-media-dashboard:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "marketing-social-media-dashboard:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "marketing-social-media-dashboard:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/marketing/social-media-dashboard-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["marketing-social-media-dashboard"]
+}

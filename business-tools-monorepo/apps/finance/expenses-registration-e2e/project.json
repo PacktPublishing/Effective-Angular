@@ -1,0 +1,35 @@
+{
+  "name": "finance-expenses-registration-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/finance/expenses-registration-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/finance/expenses-registration-e2e/cypress.config.ts",
+        "devServerTarget": "finance-expenses-registration:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "finance-expenses-registration:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "finance-expenses-registration:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/finance/expenses-registration-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["finance-expenses-registration"]
+}

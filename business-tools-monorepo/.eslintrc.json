@@ -1,0 +1,93 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx", "deprecation", "rxjs-angular", "rxjs"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "domain:finance",
+                "onlyDependOnLibsWithTags": ["domain:finance", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:hr",
+                "onlyDependOnLibsWithTags": ["domain:hr", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:crm",
+                "onlyDependOnLibsWithTags": ["domain:crm", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:inventory",
+                "onlyDependOnLibsWithTags": ["domain:inventory", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:shared",
+                "onlyDependOnLibsWithTags": ["domain:shared"]
+              },
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:util", "type:feature", "type:data-access"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": [
+          "apps/*/*/tsconfig.*?.json",
+          "libs/*/*/*/tsconfig.*?.json",
+          "libs/workspace-generators-plugin/tsconfig.*?.json"
+        ]
+      },
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {
+        "deprecation/deprecation": "warn",
+        "rxjs/no-async-subscribe": "error",
+        "rxjs/no-create": "error",
+        "rxjs/no-explicit-generics": "error",
+        "rxjs/no-ignored-error": "error",
+        "rxjs/no-ignored-notifier": "error",
+        "rxjs/no-ignored-replay-buffer": "error",
+        "rxjs/no-ignored-takewhile-value": "error",
+        "rxjs/no-ignored-subscribe": "error",
+        "rxjs/no-index": "error",
+        "rxjs/no-internal": "error",
+        "rxjs/no-nested-subscribe": "error",
+        "rxjs/no-redundant-notify": "error",
+        "rxjs/no-sharereplay": "error",
+        "rxjs/no-unbound-methods": "error",
+        "rxjs/no-unsafe-subject-next": "error",
+        "rxjs/no-unsafe-takeuntil": "error",
+        "rxjs-angular/prefer-takeuntil": "error"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
+      "rules": {}
+    }
+  ]
+}

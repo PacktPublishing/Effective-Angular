@@ -1,0 +1,4 @@
+{
+  "eslint.validate": ["json"],
+  "explorer.compactFolders": false
+}
