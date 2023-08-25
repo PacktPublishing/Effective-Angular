@@ -24,11 +24,6 @@ export const titleResolver: ResolveFn<string> =
     };
 
 export const appRoutes: Route[] = [
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/expenses-overview(sidebar:test)'
-  },
   { path: 'expenses-overview', loadComponent: () => import('./pages/expenses-overview-page/expenses-overview-page.component'), title: titleResolver },
   { path: 'expenses-approval', loadComponent: () => import('./pages/expenses-approval-page/expenses-approval-page.component'), title: titleResolver },
   { path: 'test', component: LinkListSidebarComponent, outlet: 'sidebar' },
