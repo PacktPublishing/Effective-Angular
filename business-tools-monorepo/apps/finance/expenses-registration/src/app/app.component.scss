@@ -1,0 +1,23 @@
+/* Define basic styling for the pageContainer */
+.pageContainer {
+  display: flex;
+  height: 100vh; /* Adjust as needed */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Style for the sidebar container */
+.sideBarContainer {
+  width: 300px; /* Adjust the width of the sidebar */
+  background-color: #263238; /* Sidebar background color */
+  color: #FFFFFF; /* Text color in the sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Style for the content container */
+.contentContainer {
+  flex: 1; /* Take up remaining space */
+  background-color: #F5F5F5; /* Content background color */
+  padding: 20px;
+  box-sizing: border-box;
+}

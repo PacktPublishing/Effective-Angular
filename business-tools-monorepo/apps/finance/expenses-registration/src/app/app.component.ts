@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 
 @Component({
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, RouterOutlet],
   selector: 'business-tools-monorepo-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

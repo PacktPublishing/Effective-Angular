@@ -1,0 +1,50 @@
+{
+  "name": "finance-ui-sidebars",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/finance/ui/sidebars/src",
+  "prefix": "bt-libs-ui",
+  "tags": ["domain:finance", "type:ui"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/finance/ui/sidebars/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/finance/ui/sidebars/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/finance/ui/sidebars/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/finance/ui/sidebars/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/finance/ui/sidebars/**/*.ts",
+          "libs/finance/ui/sidebars/**/*.html"
+        ]
+      }
+    }
+  }
+}

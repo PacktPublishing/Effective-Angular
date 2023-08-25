@@ -8,10 +8,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@pages/*": ["app/pages/*"]
-    },
+    "types": ["node", "jest"]
   },
   "files": [],
   "include": [],

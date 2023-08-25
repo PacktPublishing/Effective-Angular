@@ -20,7 +20,8 @@
       ],
       "@business-tools/workspace-generators-plugin": [
         "libs/workspace-generators-plugin/src/index.ts"
-      ]
+      ],
+      "@bt-libs/finance/ui/sidebars": ["libs/finance/ui/sidebars/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

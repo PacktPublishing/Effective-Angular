@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'business-tools-monorepo-home-page',
+  selector: 'bt-libs-ui-link-list-sidebar',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss'],
+  templateUrl: './link-list-sidebar.component.html',
+  styleUrls: ['./link-list-sidebar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class HomePageComponent {}
+export class LinkListSidebarComponent {}
