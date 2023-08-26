@@ -1,4 +1,3 @@
-import { LinkListSidebarComponent } from '@bt-libs/finance/ui/sidebars';
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRouteSnapshot, ResolveFn, Route, RouterStateSnapshot, TitleStrategy } from '@angular/router';
@@ -24,7 +23,12 @@ export const titleResolver: ResolveFn<string> =
     };
 
 export const appRoutes: Route[] = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/expenses-overview'
+  },
   { path: 'expenses-overview', loadComponent: () => import('./pages/expenses-overview-page/expenses-overview-page.component'), title: titleResolver },
   { path: 'expenses-approval', loadComponent: () => import('./pages/expenses-approval-page/expenses-approval-page.component'), title: titleResolver },
-  { path: 'test', component: LinkListSidebarComponent, outlet: 'sidebar' },
 ];
+
