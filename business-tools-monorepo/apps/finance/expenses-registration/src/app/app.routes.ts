@@ -17,10 +17,8 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
 }
 
 export const titleResolver: ResolveFn<string> =
-    (route: ActivatedRouteSnapshot) => {
-      const formattedTitle = route.routeConfig?.path?.replace('-', ' ');
-      return formattedTitle ? formattedTitle : '';
-    };
+  (route: ActivatedRouteSnapshot) =>
+    route.routeConfig?.path?.replace('-', ' ') ?? '';
 
 export const appRoutes: Route[] = [
   {
@@ -31,4 +29,3 @@ export const appRoutes: Route[] = [
   { path: 'expenses-overview', loadComponent: () => import('./pages/expenses-overview-page/expenses-overview-page.component'), title: titleResolver },
   { path: 'expenses-approval', loadComponent: () => import('./pages/expenses-approval-page/expenses-approval-page.component'), title: titleResolver },
 ];
-
