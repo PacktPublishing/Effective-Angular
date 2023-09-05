@@ -1,0 +1,50 @@
+{
+  "name": "finance-data-access-expenses",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/finance/data-access/expenses/src",
+  "prefix": "bt-libs-data-access",
+  "tags": ["domain:finance", "type:data-access"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/finance/data-access/expenses/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/finance/data-access/expenses/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/finance/data-access/expenses/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/finance/data-access/expenses/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/finance/data-access/expenses/**/*.ts",
+          "libs/finance/data-access/expenses/**/*.html"
+        ]
+      }
+    }
+  }
+}
