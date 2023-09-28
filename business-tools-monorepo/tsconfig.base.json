@@ -24,6 +24,9 @@
       "@bt-libs/shared/ui/common-directives": [
         "libs/shared/ui/common-directives/src/index.ts"
       ],
+      "@bt-libs/shared/util/common-pipes": [
+        "libs/shared/util/common-pipes/src/index.ts"
+      ],
       "@business-tools/workspace-generators-plugin": [
         "libs/workspace-generators-plugin/src/index.ts"
       ]
