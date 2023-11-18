@@ -1,2 +1,2 @@
 <p>widget-container works!</p>
-<ng-container #widgetContainer></ng-container>
+<ng-container *ngComponentOutlet="widget.component; injector: widget.injector;" />

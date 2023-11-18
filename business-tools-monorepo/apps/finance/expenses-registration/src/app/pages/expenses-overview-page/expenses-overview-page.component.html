@@ -13,4 +13,5 @@
 </ng-template>
 
 
-<bt-libs-widget-container></bt-libs-widget-container>
+<bt-libs-widget-container [widgetLoader]="widget" [injector]="injector"></bt-libs-widget-container>
+<!-- <bt-libs-widget-container *ngIf="activeWidget" [widget]="activeWidget"></bt-libs-widget-container> -->

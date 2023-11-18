@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, Type, inject, SimpleChanges, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { WidgetOption } from './widget-loaders';
 
 @Component({
   selector: 'bt-libs-widget-container',
@@ -9,4 +10,19 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./widget-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WidgetContainerComponent {}
+export class WidgetContainerComponent {
+  @Input() injector!: Injector | null;
+  @Input({ required: true }) widgetLoader!: WidgetOption;
+  widget: widget = { component: null, injector: null };
+
+  protected readonly cd = inject(ChangeDetectorRef);
+
+  async ngOnChanges(changes: SimpleChanges) {
+    const widgetLoader: WidgetOption = changes['widgetLoader'].currentValue;
+    const widget = await widgetLoader();
+    this.widget = { component: widget[Object.keys(widget)[0]], injector: this.injector };
+    this.cd.detectChanges();
+  }
+}
+
+export interface widget { component: Type<any> | null; injector: Injector | any };
