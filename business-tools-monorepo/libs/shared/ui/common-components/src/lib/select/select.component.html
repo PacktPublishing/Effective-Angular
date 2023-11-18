@@ -1,0 +1,15 @@
+<select (change)="onOptionChange($event)">
+  <option [value]="null" [selected]="!selectedIndex">Make selection</option>
+
+  <ng-container *ngFor="let option of options; index as i">
+    <option [value]="i" [selected]="i === selectedIndex">
+      <ng-container [ngTemplateOutlet]="optionTemplate || defaultTemplate"
+        [ngTemplateOutletContext]="{ $implicit: option}">
+      </ng-container>
+    </option>
+  </ng-container>
+</select>
+
+<ng-template #defaultTemplate let-option>
+  {{ labelKey ? option[labelKey] : option }}
+</ng-template>

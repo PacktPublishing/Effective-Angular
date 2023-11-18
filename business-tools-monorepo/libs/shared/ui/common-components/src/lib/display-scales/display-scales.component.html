@@ -1,0 +1,3 @@
+<div *ngFor="let size of scaleSizes; let i = index" [style.transform]="'scale(' + size + ')'">
+  <ng-container [ngTemplateOutlet]="content.templateRef"></ng-container>
+</div>
