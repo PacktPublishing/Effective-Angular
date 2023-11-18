@@ -1,0 +1,23 @@
+<div class="form-container">
+  <form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+    <div class="form-field" *ngFor="let control of formModelConfig">
+      <label for="description">{{control.label}}</label>
+
+      <ng-container [ngSwitch]="control.formFieldType">
+        <input *ngSwitchCase="'input'" formControlName="{{control.controlKey}}" type="{{control.inputType}}">
+
+        <select *ngSwitchCase="'select'" formControlName="{{control.controlKey}}">
+          <option *ngFor="let option of control.selectOptions" value="{{option}}"></option>
+        </select>
+      </ng-container>
+
+      <span *ngIf="formModel.touched && formModel.get(control.controlKey)?.hasError('required')">This field is
+        required</span>
+
+      <span *ngIf="formModel.touched && formModel.get(control.controlKey)?.hasError('min')">0 is the lowest number
+        allowed</span>
+      <span *ngIf="formModel.touched && formModel.get(control.controlKey)?.hasError('max')">100 is the highest number
+        allowed</span>
+    </div>
+  </form>
+</div>
