@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "finance-expenses-registration:build:production"
+          "buildTarget": "finance-expenses-registration:build:production"
         },
         "development": {
-          "browserTarget": "finance-expenses-registration:build:development"
+          "buildTarget": "finance-expenses-registration:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,11 +64,11 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "finance-expenses-registration:build"
+        "buildTarget": "finance-expenses-registration:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -81,14 +81,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/finance/expenses-registration/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/finance/expenses-registration/jest.config.ts"
       }
     },
     "serve-static": {
