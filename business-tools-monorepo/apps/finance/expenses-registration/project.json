@@ -17,7 +17,8 @@
         "tsConfig": "apps/finance/expenses-registration/tsconfig.app.json",
         "assets": [
           "apps/finance/expenses-registration/src/favicon.ico",
-          "apps/finance/expenses-registration/src/assets"
+          "apps/finance/expenses-registration/src/assets",
+          "apps/finance/expenses-registration/src/assets/api"
         ],
         "styles": ["apps/finance/expenses-registration/src/styles.scss"],
         "scripts": []
