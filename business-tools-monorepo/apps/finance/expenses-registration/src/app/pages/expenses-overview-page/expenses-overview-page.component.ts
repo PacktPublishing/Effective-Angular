@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Injector, inject } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddExpenseComponent, AddExpenseReactive } from '@bt-libs/finance/ui/expenses-registration-forms';
-import { DeferWidgetComponent, DisplayScalesComponent, ModalComponent, ScalesProjectionDirective, SelectComponent, WEATHERWIDGET, WidgetContainerComponent, WidgetOption, Widgets, widgetLoaders } from '@bt-libs/shared/common-components';
+import { DeferWidgetComponent, DisplayScalesComponent, ModalComponent, ScalesProjectionDirective, SelectComponent, WidgetContainerComponent, Widgets } from '@bt-libs/shared/common-components';
 
 @Component({
   selector: 'business-tools-monorepo-expenses-overview-page',
