@@ -1,0 +1,8 @@
+<p>defer-widget works!</p>
+
+@defer (when activeWidget === widgets.Clock) {
+<bt-libs-clock-widget *ngIf="activeWidget === widgets.Clock" />
+}
+@defer (when activeWidget === widgets.Weather) {
+<bt-libs-weather-widget *ngIf="activeWidget === widgets.Weather" [widgetData]="widgetData" />
+}
