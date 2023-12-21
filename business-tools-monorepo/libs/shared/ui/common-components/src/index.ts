@@ -9,3 +9,5 @@ export * from './lib/weather-widget/weather-widget.component';
 export * from './lib/clock-widget/clock-widget.component';
 export * from './lib/widget-container/widet-tokens';
 export * from './lib/widget-container/widget-loaders';
+export * from './lib/defer-widget/defer-widget.component';
+export * from './lib/defer-widget/widgets.enum';
