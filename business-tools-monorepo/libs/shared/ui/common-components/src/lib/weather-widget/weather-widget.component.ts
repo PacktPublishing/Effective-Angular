@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WEATHERWIDGET, WeatherWidgetData } from '../widget-container/widet-tokens';
+import { WeatherWidgetData } from '../widget-container/widet-tokens';
 
 @Component({
   selector: 'bt-libs-weather-widget',
