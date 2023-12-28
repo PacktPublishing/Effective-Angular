@@ -24,11 +24,17 @@
       "@bt-libs/shared/common-components": [
         "libs/shared/ui/common-components/src/index.ts"
       ],
+      "@bt-libs/shared/data-access/generic-http": [
+        "libs/shared/data-access/generic-http/src/index.ts"
+      ],
       "@bt-libs/shared/ui/common-directives": [
         "libs/shared/ui/common-directives/src/index.ts"
       ],
       "@bt-libs/shared/util/common-pipes": [
         "libs/shared/util/common-pipes/src/index.ts"
+      ],
+      "@bt-libs/shared/util/custom-decorators": [
+        "libs/shared/util/custom-decorators/src/index.ts"
       ],
       "@bt-libs/shared/util/form-validators": [
         "libs/shared/util/form-validators/src/index.ts"

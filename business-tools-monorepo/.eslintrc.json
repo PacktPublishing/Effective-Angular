@@ -68,8 +68,7 @@
         "rxjs/no-sharereplay": "error",
         "rxjs/no-unbound-methods": "error",
         "rxjs/no-unsafe-subject-next": "error",
-        "rxjs/no-unsafe-takeuntil": "error",
-        "rxjs-angular/prefer-takeuntil": "error"
+        "rxjs/no-unsafe-takeuntil": "error"
       }
     },
     {
