@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, Type, inject, SimpleChanges, Injector, OnChanges } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, Type, inject, SimpleChanges, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WidgetOption } from './widget-loaders';
 
@@ -10,7 +10,7 @@ import { WidgetOption } from './widget-loaders';
   styleUrls: ['./widget-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WidgetContainerComponent implements OnChanges {
+export class WidgetContainerComponent {
   @Input() injector!: Injector | null;
   @Input({ required: true }) widgetLoader!: WidgetOption;
   widget: widget = { component: null, injector: null };
@@ -25,4 +25,5 @@ export class WidgetContainerComponent implements OnChanges {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface widget { component: Type<any> | null; injector: Injector | any };
