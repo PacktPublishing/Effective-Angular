@@ -1,0 +1,15 @@
+<ng-container *ngIf="shown">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h1>{{title}}</h1>
+      <ng-content select="[header]"></ng-content>
+      <span (click)="shown = false; shownChange.emit()">X</span>
+    </div>
+
+    <div class="modal-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+  <div class="backdrop"></div>
+</ng-container>

@@ -15,8 +15,23 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@bt-libs/finance/data-access/expenses": [
+        "libs/finance/data-access/expenses/src/index.ts"
+      ],
+      "@bt-libs/finance/ui/expenses-registration-forms": [
+        "libs/finance/ui/expenses-registration-forms/src/index.ts"
+      ],
       "@bt-libs/shared/common-components": [
         "libs/shared/ui/common-components/src/index.ts"
+      ],
+      "@bt-libs/shared/ui/common-directives": [
+        "libs/shared/ui/common-directives/src/index.ts"
+      ],
+      "@bt-libs/shared/util/common-pipes": [
+        "libs/shared/util/common-pipes/src/index.ts"
+      ],
+      "@bt-libs/shared/util/form-validators": [
+        "libs/shared/util/form-validators/src/index.ts"
       ],
       "@business-tools/workspace-generators-plugin": [
         "libs/workspace-generators-plugin/src/index.ts"
