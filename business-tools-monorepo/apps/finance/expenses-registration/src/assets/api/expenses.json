@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Office Supplies",
+    "amount": 50.0,
+    "vatPercentage": 20,
+    "vatAmount": 10.0
+  },
+  {
+    "title": "Travel Expenses",
+    "amount": 200.0,
+    "vatPercentage": 10,
+    "vatAmount": 20.0
+  },
+  {
+    "title": "Consultation Fee",
+    "amount": 500.0,
+    "vatPercentage": 15,
+    "vatAmount": 75.0
+  }
+]
