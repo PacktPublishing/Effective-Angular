@@ -1,3 +1,25 @@
-.content {
+.container {
+  width: 100vw;
   padding: 20px;
+  box-sizing: border-box;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 5px 10px;
+    text-align: start;
+  }
+
+  .deleteRow {
+    cursor: pointer;
+    font-weight: bold;
+  }
 }

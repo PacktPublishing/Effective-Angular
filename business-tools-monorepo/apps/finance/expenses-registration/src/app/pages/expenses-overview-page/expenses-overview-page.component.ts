@@ -1,8 +1,11 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ExpenseModel } from '@bt-libs/finance/data-access/expenses';
+// import { ExpensesHttpService } from '@bt-libs/finance/data-access/expenses';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddExpenseComponent, AddExpenseReactive } from '@bt-libs/finance/ui/expenses-registration-forms';
+import { AddExpenseComponent, AddExpenseReactive, DynamicControl, DynamicFormComponent } from '@bt-libs/finance/ui/expenses-registration-forms';
 import { ModalComponent } from '@bt-libs/shared/common-components';
-
+import { Validators } from '@angular/forms';
+// import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'business-tools-monorepo-expenses-overview-page',
@@ -13,19 +16,15 @@ import { ModalComponent } from '@bt-libs/shared/common-components';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ExpensesOverviewPageComponent {
-  addExpenseShown = false;
+  addExpenseModalShown = signal(false);
+  // expenses = signal<ExpenseModel[]>([
+  //   { description: "Laptop", amount: 2000, percentage: 20, vat: 400, id: 1 },
+  //   { description: "Travel", amount: 50, percentage: 20, vat: 10, id: 2 },
+  //   { description: "Food", amount: 10, percentage: 10, vat: 1, id: 3 },
+  // ]);
 
-  protected readonly cd = inject(ChangeDetectorRef);
-  // protected readonly expensesApi = inject(ExpensesHttpService);
-  // protected readonly destroyRef = inject(DestroyRef);
-
-  onAddExpense(expense: AddExpenseReactive) {
-    console.log('addExpense ==>', expense);
+  onAddExpense(expenseToAdd: AddExpenseReactive) {
+    console.log(expenseToAdd);
   }
-
-  // ngOnInit() {
-  //   // eslint-disable-next-line rxjs/no-ignored-error, rxjs-angular/prefer-takeuntil
-  //   this.expensesApi.get().pipe(takeUntilDestroyed(this.destroyRef)).subscribe((data) => { console.log('data ==>', data); });
-  // }
 
 }
