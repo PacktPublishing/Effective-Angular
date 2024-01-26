@@ -1,11 +1,8 @@
 import { ExpenseModel } from '@bt-libs/finance/data-access/expenses';
-// import { ExpensesHttpService } from '@bt-libs/finance/data-access/expenses';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddExpenseComponent, AddExpenseReactive, DynamicControl, DynamicFormComponent } from '@bt-libs/finance/ui/expenses-registration-forms';
+import { AddExpenseComponent } from '@bt-libs/finance/ui/expenses-registration-forms';
 import { ModalComponent } from '@bt-libs/shared/common-components';
-import { Validators } from '@angular/forms';
-// import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'business-tools-monorepo-expenses-overview-page',
@@ -16,15 +13,64 @@ import { Validators } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ExpensesOverviewPageComponent {
-  addExpenseModalShown = signal(false);
-  // expenses = signal<ExpenseModel[]>([
-  //   { description: "Laptop", amount: 2000, percentage: 20, vat: 400, id: 1 },
-  //   { description: "Travel", amount: 50, percentage: 20, vat: 10, id: 2 },
-  //   { description: "Food", amount: 10, percentage: 10, vat: 1, id: 3 },
-  // ]);
+  expenses = signal<ExpenseModel[]>([
+    {
+      id: 1,
+      description: "Office Supplies",
+      amount: {
+        amountExclVat: 100,
+        vatPercentage: 20,
+      },
+      date: "2024-01-04",
+      tags: [
+        "printer"
+      ]
+    },
+    {
+      id: 2,
+      description: "Travel",
+      amount: {
+        amountExclVat: 50,
+        vatPercentage: 20,
+      },
+      date: "2024-01-04",
+      tags: [
+        "train",
+        "public transport",
+      ]
+    },
+  ]);
+  showAddExpenseModal = signal(false);
+  showSummary = signal(false);
+  summaryBtnText = computed(() => {
+    console.log('summaryBtnText');
+    return this.showSummary() ? 'Hide summary' : 'Show summary'
+  });
+  totalInclVat = computed(() => this.showSummary() ? this.expenses().reduce(
+    (total, { amount: { amountExclVat, vatPercentage } }) => amountExclVat / 100 * (100 + vatPercentage) + total,
+    0
+  ) : null
+  );
 
-  onAddExpense(expenseToAdd: AddExpenseReactive) {
-    console.log(expenseToAdd);
+  e = effect(() => {
+    console.log('effect', this.showSummary());
+  })
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.showSummary.set(true);
+      this.showSummary.set(false);
+      this.showSummary.set(true);
+    }, 5000);
+  }
+
+  onSummaryChange() {
+    this.showSummary.update(showSummary => !showSummary);
+  }
+
+  onAddExpense(expenseToAdd: ExpenseModel) {
+    this.expenses.update(expenses => [...expenses, expenseToAdd]);
+    this.showAddExpenseModal.set(false);
   }
 
 }

@@ -1,28 +1,40 @@
-<!-- <div class="container">
+<div class="container">
   <div class="header">
     <h1>Expenses Overview</h1>
-    <button (click)="addExpenseModalShown.set(true)">Add expense</button>
+    <div class="actionButtons">
+      <button (click)="onSummaryChange()">{{summaryBtnText()}}</button>
+      <button (click)="showAddExpenseModal.set(true)">Add expense</button>
+    </div>
   </div>
   <table>
     <tr>
       <th>Description</th>
       <th>Amount</th>
       <th>Percentage</th>
-      <th>VAT</th>
+      <th>Date</th>
+      <th>Tags</th>
     </tr>
     @for (expense of expenses(); track expense.id){
     <tr>
       <td>{{ expense.description }}</td>
-      <td>{{ expense.amount }}</td>
-      <td>{{ expense.amount }}</td>
-      <td>{{ expense.vat }}</td>
-      <td class="deleteRow">X</td>
+      <td>{{ expense.amount.amountExclVat }}</td>
+      <td>{{ expense.amount.vatPercentage }}</td>
+      <td>{{ expense.date | date:'dd MMM yyyy' }}</td>
+      <td>
+        @for (tag of expense.tags; track tag){
+        <span class="tag" *ngIf="tag">{{tag}}</span>
+        }
+      </td>
+    </tr>
+    }
+    @if(showSummary()) {
+    <tr class="summary">
+      <td>Total incl VAT: {{totalInclVat()}}</td>
     </tr>
     }
   </table>
 </div>
 
-<bt-libs-modal [shown]="addExpenseModalShown()" (shownChange)="addExpenseModalShown.set(false)"
-  [title]="'Add expenses'">
+<bt-libs-modal [shown]="showAddExpenseModal()" (shownChange)="showAddExpenseModal.set(false)" [title]="'Add expenses'">
   <bt-libs-ui-add-expense-form #form (addExpense)="onAddExpense($event)" />
-</bt-libs-modal> -->
+</bt-libs-modal>

@@ -6,6 +6,7 @@ export interface ExpenseDto {
   date: string;
   tags?: string[];
 }
+
 export interface ExpenseModel {
   id: number | null;
   description: string;
