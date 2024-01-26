@@ -1,11 +1,8 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, inject } from '@angular/core';
+import { ExpenseModel } from '@bt-libs/finance/data-access/expenses';
+import { ChangeDetectionStrategy, Component, computed, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddExpenseComponent, AddExpenseReactive } from '@bt-libs/finance/ui/expenses-registration-forms';
+import { AddExpenseComponent } from '@bt-libs/finance/ui/expenses-registration-forms';
 import { ModalComponent } from '@bt-libs/shared/common-components';
-import { LogMethod } from '@bt-libs/shared/util/custom-decorators';
-import { ExpensesHttpService } from '@bt-libs/finance/data-access/expenses';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-
 
 @Component({
   selector: 'business-tools-monorepo-expenses-overview-page',
@@ -16,24 +13,64 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ExpensesOverviewPageComponent {
-  addExpenseShown = false;
+  expenses = signal<ExpenseModel[]>([
+    {
+      id: 1,
+      description: "Office Supplies",
+      amount: {
+        amountExclVat: 100,
+        vatPercentage: 20,
+      },
+      date: "2024-01-04",
+      tags: [
+        "printer"
+      ]
+    },
+    {
+      id: 2,
+      description: "Travel",
+      amount: {
+        amountExclVat: 50,
+        vatPercentage: 20,
+      },
+      date: "2024-01-04",
+      tags: [
+        "train",
+        "public transport",
+      ]
+    },
+  ]);
+  showAddExpenseModal = signal(false);
+  showSummary = signal(false);
+  summaryBtnText = computed(() => {
+    console.log('summaryBtnText');
+    return this.showSummary() ? 'Hide summary' : 'Show summary'
+  });
+  totalInclVat = computed(() => this.showSummary() ? this.expenses().reduce(
+    (total, { amount: { amountExclVat, vatPercentage } }) => amountExclVat / 100 * (100 + vatPercentage) + total,
+    0
+  ) : null
+  );
 
-  protected readonly cd = inject(ChangeDetectorRef);
-  protected readonly expensesApi = inject(ExpensesHttpService);
-  protected readonly destroyRef = inject(DestroyRef);
-
-  onAddExpense(expense: AddExpenseReactive) {
-    console.log('addExpense ==>', expense);
-  }
+  e = effect(() => {
+    console.log('effect', this.showSummary());
+  })
 
   ngOnInit() {
-    this.test(1, 2);
-    // eslint-disable-next-line rxjs/no-ignored-error, rxjs-angular/prefer-takeuntil
-    this.expensesApi.get().pipe(takeUntilDestroyed(this.destroyRef)).subscribe((data) => { console.log('data ==>', data); });
+    setTimeout(() => {
+      this.showSummary.set(true);
+      this.showSummary.set(false);
+      this.showSummary.set(true);
+    }, 5000);
   }
 
-  @LogMethod
-  test(a: number, b: number) {
-    return a + b;
+  onSummaryChange() {
+    this.showSummary.update(showSummary => !showSummary);
   }
+
+  onAddExpense(expenseToAdd: ExpenseModel) {
+    this.expenses.update(expenses => [...expenses, expenseToAdd]);
+    this.showAddExpenseModal.set(false);
+  }
+
 }

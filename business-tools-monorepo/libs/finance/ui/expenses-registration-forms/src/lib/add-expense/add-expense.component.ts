@@ -1,3 +1,4 @@
+import { ExpenseModel } from '@bt-libs/finance/data-access/expenses';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormArray, FormControl, FormGroup, FormRecord, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -37,7 +38,7 @@ export class AddExpenseComponent {
   // Reactive form:
 
   @Input()
-  public set expenseToAdd(value: AddExpenseReactive) {
+  public set expenseToAdd(value: ExpenseModel) {
     this.addExpenseForm.patchValue(value);
 
     this.addExpenseForm.controls.tags.clear();
@@ -46,7 +47,7 @@ export class AddExpenseComponent {
     });
   }
 
-  @Output() addExpense = new EventEmitter<AddExpenseReactive>();
+  @Output() addExpense = new EventEmitter<ExpenseModel>();
 
   addExpenseForm = new FormGroup({
     description: new FormControl('', [Validators.required, maxWordCountValidator(3)]),
@@ -54,8 +55,8 @@ export class AddExpenseComponent {
       amountExclVat: new FormControl<number | null>(null, [Validators.required]),
       vatPercentage: new FormControl<number | null>(null, [Validators.required, Validators.min(0), Validators.max(100)]),
     }),
-    date: new FormControl([''], [Validators.required]),
-    tags: new FormArray([
+    date: new FormControl<string | null>(null, [Validators.required]),
+    tags: new FormArray<FormControl<string | null>>([
       new FormControl(''),
     ])
   });
@@ -69,7 +70,7 @@ export class AddExpenseComponent {
   }
 
   onSubmit() {
-    this.addExpense.emit(structuredClone(this.addExpenseForm.value as AddExpenseReactive));
+    this.addExpense.emit(structuredClone(this.addExpenseForm.value as ExpenseModel));
     this.addExpenseForm.reset();
   }
 
