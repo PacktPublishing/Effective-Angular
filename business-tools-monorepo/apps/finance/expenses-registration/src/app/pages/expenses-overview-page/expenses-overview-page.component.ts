@@ -56,14 +56,6 @@ export default class ExpensesOverviewPageComponent {
     console.log('effect', this.showSummary());
   })
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.showSummary.set(true);
-      this.showSummary.set(false);
-      this.showSummary.set(true);
-    }, 5000);
-  }
-
   onSummaryChange() {
     this.showSummary.update(showSummary => !showSummary);
   }
