@@ -1,5 +1,5 @@
-import { ExpenseModel } from '@bt-libs/finance/data-access/expenses';
-import { ChangeDetectionStrategy, Component, computed, effect, signal } from '@angular/core';
+import { ExpenseModel, ExpensesFacade } from '@bt-libs/finance/data-access/expenses';
+import { ChangeDetectionStrategy, Component, OnInit, computed, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddExpenseComponent } from '@bt-libs/finance/ui/expenses-registration-forms';
 import { ModalComponent } from '@bt-libs/shared/common-components';
@@ -12,57 +12,25 @@ import { ModalComponent } from '@bt-libs/shared/common-components';
   styleUrls: ['./expenses-overview-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class ExpensesOverviewPageComponent {
-  expenses = signal<ExpenseModel[]>([
-    {
-      id: 1,
-      description: "Office Supplies",
-      amount: {
-        amountExclVat: 100,
-        vatPercentage: 20,
-      },
-      date: "2024-01-04",
-      tags: [
-        "printer"
-      ]
-    },
-    {
-      id: 2,
-      description: "Travel",
-      amount: {
-        amountExclVat: 50,
-        vatPercentage: 20,
-      },
-      date: "2024-01-04",
-      tags: [
-        "train",
-        "public transport",
-      ]
-    },
-  ]);
+export default class ExpensesOverviewPageComponent implements OnInit {
+  protected readonly expensesFacade = inject(ExpensesFacade);
+
+  expenses = this.expensesFacade.expenses;
+
   showAddExpenseModal = signal(false);
   showSummary = signal(false);
-  summaryBtnText = computed(() => {
-    console.log('summaryBtnText');
-    return this.showSummary() ? 'Hide summary' : 'Show summary'
-  });
-  totalInclVat = computed(() => this.showSummary() ? this.expenses().reduce(
-    (total, { amount: { amountExclVat, vatPercentage } }) => amountExclVat / 100 * (100 + vatPercentage) + total,
-    0
-  ) : null
-  );
+  summaryBtnText = computed(() => this.showSummary() ? 'Hide summary' : 'Show summary');
 
-  e = effect(() => {
-    console.log('effect', this.showSummary());
-  })
+  ngOnInit() {
+    this.expensesFacade.fetchExpenses();
+  }
 
   onSummaryChange() {
     this.showSummary.update(showSummary => !showSummary);
   }
 
   onAddExpense(expenseToAdd: ExpenseModel) {
-    this.expenses.update(expenses => [...expenses, expenseToAdd]);
-    this.showAddExpenseModal.set(false);
+    console.log('expenseToAdd', expenseToAdd);
   }
 
 }

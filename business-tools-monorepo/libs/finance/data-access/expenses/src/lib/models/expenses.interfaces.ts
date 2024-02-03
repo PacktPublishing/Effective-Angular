@@ -11,9 +11,15 @@ export interface ExpenseModel {
   id: number | null;
   description: string;
   amount: {
-    amountExclVat: number;
+    value: number;
     vatPercentage: number;
   };
   date: string;
   tags?: string[];
+}
+
+export interface ExpensesViewModel {
+  total: number;
+  inclVat: boolean;
+  expenses: ExpenseModel[];
 }

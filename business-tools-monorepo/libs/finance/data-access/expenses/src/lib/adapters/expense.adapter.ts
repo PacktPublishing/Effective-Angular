@@ -6,7 +6,7 @@ export class ExpensesModelAdapter implements ModelAdapter<ExpenseDto, ExpenseMod
     return {
       description: dto.title,
       amount: {
-        amountExclVat: dto.amount,
+        value: dto.amount,
         vatPercentage: dto.vatPercentage
       },
       date: dto.date,
@@ -19,7 +19,7 @@ export class ExpensesModelAdapter implements ModelAdapter<ExpenseDto, ExpenseMod
     return {
       id: model.id ? model.id : null,
       title: model.description,
-      amount: model.amount.amountExclVat,
+      amount: model.amount.value,
       vatPercentage: model.amount.vatPercentage,
       date: model.date,
       tags: model.tags ? model.tags : []
