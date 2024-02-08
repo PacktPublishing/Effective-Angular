@@ -16,6 +16,7 @@ export class ExpensesModelAdapter implements ModelAdapter<ExpenseDto, ExpenseMod
   }
 
   toDto(model: ExpenseModel): ExpenseDto {
+    console.log('model ==>', model);
     return {
       id: model.id ? model.id : null,
       title: model.description,

@@ -23,3 +23,11 @@ export interface ExpensesViewModel {
   inclVat: boolean;
   expenses: ExpenseModel[];
 }
+
+export interface ExpensesState {
+  expenses: ExpenseModel[];
+  selectedExpense: ExpenseModel | null;
+  isLoading: boolean;
+  inclVat: boolean;
+  error: string | null;
+}

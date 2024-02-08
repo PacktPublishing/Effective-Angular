@@ -30,7 +30,7 @@ export default class ExpensesOverviewPageComponent implements OnInit {
   }
 
   onAddExpense(expenseToAdd: ExpenseModel) {
-    console.log('expenseToAdd', expenseToAdd);
+    this.expensesFacade.addExpense(expenseToAdd);
   }
 
 }

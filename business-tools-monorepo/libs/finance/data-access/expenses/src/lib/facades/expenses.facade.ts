@@ -3,43 +3,48 @@ import { ExpensesStore } from '../stores/expenses.store';
 import { ExpenseModel, ExpensesViewModel } from '../models/expenses.interfaces';
 import { map } from 'rxjs';
 import { IExpensesFacade } from './expensesFacade.interface';
+import { Store } from '@ngrx/store';
+import { ExpenseActions, ExpenseSelectors } from '../state/expenses';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExpensesFacade implements IExpensesFacade {
+  protected readonly store = inject(Store);
   protected readonly expensesStore = inject(ExpensesStore);
 
-  expenseSelector$ = this.expensesStore.expense$.pipe(map(expense => this.mapExpense(expense, this.expensesStore.inclVat())));
+  expensesSignal = toSignal(this.store.select(ExpenseSelectors.selectExpenses), { initialValue: [] });
+  inclVat = toSignal(this.store.select(ExpenseSelectors.selectInclVat), { initialValue: false });
 
-  inclVat = this.expensesStore.inclVat;
-  selectedExpense = this.expensesStore.selectedExpense;
+  expenseSelector$ = this.expensesStore.expense$.pipe(map(expense => this.mapExpense(expense, this.expensesStore.inclVat())));
+  selectedExpense = toSignal(this.store.select(ExpenseSelectors.selectSelectedExpense), { initialValue: null });
 
   expenses = computed<ExpensesViewModel>(() => {
-    const inclVat = this.expensesStore.inclVat();
+    const inclVat = this.inclVat();
     return {
-      expenses: this.expensesStore.expenses().map(expense => this.mapExpense(expense, inclVat)),
+      expenses: this.expensesSignal().map(expense => this.mapExpense(expense, inclVat)),
       inclVat,
-      total: this.expensesStore.expenses().reduce((acc, expense) => {
+      total: this.expensesSignal().reduce((acc, expense) => {
         return acc + (inclVat ? (expense.amount.value * (1 + expense.amount.vatPercentage / 100)) : expense.amount.value);
       }, 0),
     }
   });
 
   addExpense(expense: ExpenseModel) {
-    this.expensesStore.addExpense(expense);
+    this.store.dispatch(ExpenseActions.addExpense({ expense }));
   }
 
   adjustVat() {
-    this.expensesStore.adjustVat();
+    this.store.dispatch(ExpenseActions.adjustVat());
   }
 
   clearExpenseSelection() {
-    this.expensesStore.clearExpenseSelection();
+    this.store.dispatch(ExpenseActions.clearExpenseSelection());
   }
 
   deleteExpense(id: number) {
-    this.expensesStore.deleteExpense(id);
+    this.store.dispatch(ExpenseActions.deleteExpense({ id }));
   }
 
   getExpense(id: number) {
@@ -47,19 +52,19 @@ export class ExpensesFacade implements IExpensesFacade {
   }
 
   fetchExpenses() {
-    this.expensesStore.fetchExpenses();
+    this.store.dispatch(ExpenseActions.fetchExpenses());
   }
 
   resetExpenseState() {
-    this.expensesStore.resetState();
+    this.store.dispatch(ExpenseActions.resetExpenseState());
   }
 
   selectExpense(id: number) {
-    this.expensesStore.selectExpense(id);
+    this.store.dispatch(ExpenseActions.selectExpense({ id }));
   }
 
   updateExpense(expense: ExpenseModel) {
-    this.expensesStore.updateExpense(expense);
+    this.store.dispatch(ExpenseActions.updateExpense({ expense }));
   }
 
   private mapExpense(expense: ExpenseModel, inclVat: boolean) {
