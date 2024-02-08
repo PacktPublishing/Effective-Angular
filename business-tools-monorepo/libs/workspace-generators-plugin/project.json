@@ -38,14 +38,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/workspace-generators-plugin/**/*.ts",
-          "libs/workspace-generators-plugin/package.json",
-          "libs/workspace-generators-plugin/generators.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
