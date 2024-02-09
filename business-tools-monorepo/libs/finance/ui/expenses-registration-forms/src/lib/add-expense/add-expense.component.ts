@@ -52,7 +52,7 @@ export class AddExpenseComponent {
   addExpenseForm = new FormGroup({
     description: new FormControl('', [Validators.required, maxWordCountValidator(3)]),
     amount: new FormGroup({
-      amountExclVat: new FormControl<number | null>(null, [Validators.required]),
+      value: new FormControl<number | null>(null, [Validators.required]),
       vatPercentage: new FormControl<number | null>(null, [Validators.required, Validators.min(0), Validators.max(100)]),
     }),
     date: new FormControl<string | null>(null, [Validators.required]),

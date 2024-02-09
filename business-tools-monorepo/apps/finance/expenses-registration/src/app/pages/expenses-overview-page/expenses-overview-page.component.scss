@@ -46,6 +46,17 @@
 }
 
 .actionButtons {
+  display: flex;
+  align-items: center;
+
+  .vatToggle {
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-right: 5px;
+    }
+  }
   button {
     margin-left: 10px;
     padding: 10px 20px;
@@ -57,6 +68,8 @@
     font-size: 1rem;
   }
 }
+
+
 
 /* The switch - the box around the slider */
 .switch {

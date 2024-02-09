@@ -31,14 +31,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/shared/util/custom-decorators/**/*.ts",
-          "libs/shared/util/custom-decorators/**/*.html",
-          "libs/shared/util/custom-decorators/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     }
   }
 }
