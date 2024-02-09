@@ -1,18 +1,16 @@
 import { Injectable, computed, inject } from '@angular/core';
 import { ExpenseModel, ExpensesViewModel } from '../models/expenses.interfaces';
-import { of, switchMap } from 'rxjs';
 import { IExpensesFacade } from './expensesFacade.interface';
 import { Store } from '@ngrx/store';
-import { ExpenseActions, ExpenseSelectors } from '../state/expenses';
+import { ExpenseActions, ExpenseSelectors, ExpensesEffects } from '../state/expenses';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExpensesFacade implements IExpensesFacade {
   protected readonly store = inject(Store);
-  private readonly actions = inject(Actions);
+  private readonly expensesEffects = inject(ExpensesEffects);
 
   expensesSignal = toSignal(this.store.select(ExpenseSelectors.selectExpenses), { initialValue: [] });
   inclVat = toSignal(this.store.select(ExpenseSelectors.selectInclVat), { initialValue: false });
@@ -28,14 +26,7 @@ export class ExpensesFacade implements IExpensesFacade {
   });
   selectedExpense = toSignal(this.store.select(ExpenseSelectors.selectSelectedExpense), { initialValue: null });
 
-  getExpenseSuccess$ = createEffect(() =>
-    this.actions.pipe(
-      ofType(ExpenseActions.getExpenseSuccess.type),
-      switchMap(({ expense }) => of(expense))
-    )
-  );
-
-  expenseSelector$ = this.getExpenseSuccess$;
+  expenseSelector$ = this.expensesEffects.getExpenseSuccess$;
 
   addExpense(expense: ExpenseModel) {
     this.store.dispatch(ExpenseActions.addExpense({ expense }));

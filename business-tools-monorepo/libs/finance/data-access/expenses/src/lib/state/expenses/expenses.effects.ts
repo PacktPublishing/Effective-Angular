@@ -7,7 +7,6 @@ import { ExpenseActions, ExpenseSelectors } from "./index";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { Store } from "@ngrx/store";
 
-
 @Injectable({ providedIn: 'root' })
 export class ExpensesEffects {
   private readonly actions = inject(Actions);
@@ -33,8 +32,7 @@ export class ExpensesEffects {
         const expense = this.expensesSignal().find(expense => expense.id === id);
         return expense ? of(ExpenseActions.selectExpenseSuccess({ expense })) : this.expensesApi.getById(id).pipe(
           map((expense: ExpenseModel) => ExpenseActions.selectExpenseSuccess({ expense })),
-          catchError(() => of(ExpenseActions.selectExpenseFailed()))
-        )
+          catchError(() => of(ExpenseActions.selectExpenseFailed())))
       })
     )
   );
@@ -43,10 +41,7 @@ export class ExpensesEffects {
     this.actions.pipe(
       ofType(ExpenseActions.addExpense.type),
       switchMap(({ expense }) => this.expensesApi.post(expense).pipe(
-        map((expense: ExpenseModel) => {
-          console.log('Added expense ==>', expense);
-          return ExpenseActions.addExpenseSuccess({ expense })
-        }),
+        map((expense: ExpenseModel) => ExpenseActions.addExpenseSuccess({ expense })),
         catchError(() => of(ExpenseActions.addExpenseFailed()))
       ))
     )
@@ -73,6 +68,13 @@ export class ExpensesEffects {
         )
       })
     )
+  );
+
+  getExpenseSuccess$ = createEffect(() =>
+    this.actions.pipe(
+      ofType(ExpenseActions.getExpenseSuccess.type),
+      switchMap(({ expense }) => of(expense))
+    ), { dispatch: false }
   );
 
   updateExpense$ = createEffect(() =>

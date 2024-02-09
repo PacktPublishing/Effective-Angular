@@ -16,21 +16,17 @@ export const expensesReducer = createReducer<ExpensesState>(
     ...state,
     isLoading: true
   })),
-  on(ExpenseActions.fetchExpensesSuccess, (state, { expenses }) => {
-    return {
-      ...state,
-      isLoading: false,
-      expenses,
-      error: null
-    }
-  }),
-  on(ExpenseActions.fetchExpensesFailed, (state) => {
-    return {
-      ...state,
-      isLoading: false,
-      error: 'Failed to fetch expenses!'
-    }
-  }),
+  on(ExpenseActions.fetchExpensesSuccess, (state, { expenses }) => ({
+    ...state,
+    isLoading: false,
+    expenses,
+    error: null
+  })),
+  on(ExpenseActions.fetchExpensesFailed, (state) => ({
+    ...state,
+    isLoading: false,
+    error: 'Failed to fetch expenses!'
+  })),
   on(ExpenseActions.addExpense, (state) => ({
     ...state,
     isLoading: true,
