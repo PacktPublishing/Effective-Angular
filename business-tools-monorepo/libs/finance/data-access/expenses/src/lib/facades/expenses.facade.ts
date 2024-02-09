@@ -1,25 +1,21 @@
 import { Injectable, computed, inject } from '@angular/core';
-import { ExpensesStore } from '../stores/expenses.store';
 import { ExpenseModel, ExpensesViewModel } from '../models/expenses.interfaces';
-import { map } from 'rxjs';
+import { of, switchMap } from 'rxjs';
 import { IExpensesFacade } from './expensesFacade.interface';
 import { Store } from '@ngrx/store';
 import { ExpenseActions, ExpenseSelectors } from '../state/expenses';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExpensesFacade implements IExpensesFacade {
   protected readonly store = inject(Store);
-  protected readonly expensesStore = inject(ExpensesStore);
+  private readonly actions = inject(Actions);
 
   expensesSignal = toSignal(this.store.select(ExpenseSelectors.selectExpenses), { initialValue: [] });
   inclVat = toSignal(this.store.select(ExpenseSelectors.selectInclVat), { initialValue: false });
-
-  expenseSelector$ = this.expensesStore.expense$.pipe(map(expense => this.mapExpense(expense, this.expensesStore.inclVat())));
-  selectedExpense = toSignal(this.store.select(ExpenseSelectors.selectSelectedExpense), { initialValue: null });
-
   expenses = computed<ExpensesViewModel>(() => {
     const inclVat = this.inclVat();
     return {
@@ -30,6 +26,16 @@ export class ExpensesFacade implements IExpensesFacade {
       }, 0),
     }
   });
+  selectedExpense = toSignal(this.store.select(ExpenseSelectors.selectSelectedExpense), { initialValue: null });
+
+  getExpenseSuccess$ = createEffect(() =>
+    this.actions.pipe(
+      ofType(ExpenseActions.getExpenseSuccess.type),
+      switchMap(({ expense }) => of(expense))
+    )
+  );
+
+  expenseSelector$ = this.getExpenseSuccess$;
 
   addExpense(expense: ExpenseModel) {
     this.store.dispatch(ExpenseActions.addExpense({ expense }));
@@ -48,7 +54,7 @@ export class ExpensesFacade implements IExpensesFacade {
   }
 
   getExpense(id: number) {
-    this.expensesStore.getExpense(id);
+    this.store.dispatch(ExpenseActions.getExpense({ id }));
   }
 
   fetchExpenses() {

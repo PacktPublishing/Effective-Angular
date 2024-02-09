@@ -17,6 +17,10 @@ export const deleteExpense = createAction(`[Expenses] Delete Expenses`, props<{ 
 export const deleteExpenseSuccess = createAction(`[Expenses] Delete Expenses Success`, props<{ id: number }>());
 export const deleteExpenseFailed = createAction(`[Expenses] Delete Expenses Failed`);
 
+export const getExpense = createAction(`[Expenses] Get Expenses`, props<{ id: number }>());
+export const getExpenseSuccess = createAction(`[Expenses] Get Expenses Success`, props<{ expense: ExpenseModel }>());
+export const getExpenseFailed = createAction(`[Expenses] Get Expenses Failed`);
+
 export const resetExpenseState = createAction(`[Expenses] Reset state`);
 
 export const selectExpense = createAction(`[Expenses] Select Expenses`, props<{ id: number }>());

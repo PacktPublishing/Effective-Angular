@@ -10,14 +10,14 @@ import { Store } from "@ngrx/store";
 
 @Injectable({ providedIn: 'root' })
 export class ExpensesEffects {
-  private readonly actions$ = inject(Actions);
+  private readonly actions = inject(Actions);
   private readonly expensesApi = inject(ExpensesHttpService);
   protected readonly store = inject(Store);
 
   expensesSignal = toSignal(this.store.select(ExpenseSelectors.selectExpenses), { initialValue: [] });
 
   fetchExpeses$ = createEffect(() =>
-    this.actions$.pipe(
+    this.actions.pipe(
       ofType(ExpenseActions.fetchExpenses.type),
       switchMap(() => this.expensesApi.get().pipe(
         map((expenses: ExpenseModel[]) => ExpenseActions.fetchExpensesSuccess({ expenses })),
@@ -27,7 +27,7 @@ export class ExpensesEffects {
   );
 
   fetchExpese$ = createEffect(() =>
-    this.actions$.pipe(
+    this.actions.pipe(
       ofType(ExpenseActions.selectExpense.type),
       switchMap(({ id }) => {
         const expense = this.expensesSignal().find(expense => expense.id === id);
@@ -40,7 +40,7 @@ export class ExpensesEffects {
   );
 
   addExpense$ = createEffect(() =>
-    this.actions$.pipe(
+    this.actions.pipe(
       ofType(ExpenseActions.addExpense.type),
       switchMap(({ expense }) => this.expensesApi.post(expense).pipe(
         map((expense: ExpenseModel) => {
@@ -53,7 +53,7 @@ export class ExpensesEffects {
   );
 
   deleteExpense$ = createEffect(() =>
-    this.actions$.pipe(
+    this.actions.pipe(
       ofType(ExpenseActions.deleteExpense.type),
       switchMap(({ id }) => this.expensesApi.delete(id).pipe(
         map((expense: ExpenseModel) => ExpenseActions.deleteExpenseSuccess({ id: expense.id as number })),
@@ -62,10 +62,23 @@ export class ExpensesEffects {
     )
   );
 
+  getExpese$ = createEffect(() =>
+    this.actions.pipe(
+      ofType(ExpenseActions.getExpense.type),
+      switchMap(({ id }) => {
+        const expense = this.expensesSignal().find(expense => expense.id === id);
+        return expense ? of(ExpenseActions.getExpenseSuccess({ expense })) : this.expensesApi.getById(id).pipe(
+          map((expense: ExpenseModel) => ExpenseActions.getExpenseSuccess({ expense })),
+          catchError(() => of(ExpenseActions.getExpenseFailed()))
+        )
+      })
+    )
+  );
+
   updateExpense$ = createEffect(() =>
-    this.actions$.pipe(
+    this.actions.pipe(
       ofType(ExpenseActions.updateExpense.type),
-      switchMap(({ id }) => this.expensesApi.put(id).pipe(
+      switchMap(({ expense }) => this.expensesApi.put(expense).pipe(
         map((expense: ExpenseModel) => ExpenseActions.updateExpenseSuccess({ expense })),
         catchError(() => of(ExpenseActions.updateExpenseFailed()))
       ))
