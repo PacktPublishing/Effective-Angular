@@ -26,7 +26,6 @@ export const appConfig: ApplicationConfig = {
       provide: TitleStrategy,
       useClass: TemplatePageTitleStrategy,
     },
-    provideHttpClient(),
     provideTransloco({
       config: {
         availableLangs: ['en', 'nl'],
