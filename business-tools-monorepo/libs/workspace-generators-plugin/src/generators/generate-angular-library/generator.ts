@@ -36,7 +36,7 @@ async function generateLibrary(
     prefix: `bt-libs-${type}`,
     style: 'scss',
     changeDetection: 'OnPush',
-    directory: `${options.domain}/${type}`,
+    directory: `libs/${options.domain}/${type}`,
     tags: `domain:${options.domain}, type:${type}`,
     importPath: `@bt-libs/${options.domain}/${type}/${options.name}`,
   });
