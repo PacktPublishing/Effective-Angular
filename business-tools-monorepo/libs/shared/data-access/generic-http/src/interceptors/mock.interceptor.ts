@@ -7,7 +7,7 @@ export const MockInterceptor: HttpInterceptorFn = (
   req: HttpRequest<unknown>,
   next: HttpHandlerFn,
 ) => {
-  if (!isDevMode()) return next(req);
+  if (!isDevMode() || req.url.endsWith('.json')) return next(req);
 
   const urlEnd = +req.url.split('/')[req.url.split('/').length - 1];
   const urlEndIsInteger = Number.isInteger(urlEnd);

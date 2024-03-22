@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -11,12 +11,13 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
+  navbarItems = input([], { transform: addHome });
+  languages = input<string[]>([]);
 
-  @Input({ transform: addHome, required: true }) navbarItems: NavbarItem[] = [];
-
+  @Output() languageChange = new EventEmitter();
 }
 
-function addHome(items: NavbarItem[]) {
+function addHome(items: NavbarItem[]): NavbarItem[] {
   return [{ label: 'home', route: '/' }, ...items];
 }
 

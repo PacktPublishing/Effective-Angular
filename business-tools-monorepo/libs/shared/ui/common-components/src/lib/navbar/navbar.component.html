@@ -1,5 +1,12 @@
 <nav>
-  <a *ngFor="let navbarItem of navbarItems" [routerLink]="navbarItem.route" class="navbarItem">
+  <div>
+    <a *ngFor="let navbarItem of navbarItems()" [routerLink]="navbarItem.route" class="navbarItem">
       {{navbarItem.label}}
-  </a>
+    </a>
+  </div>
+  <div>
+    <select #selectList (change)="languageChange.emit(selectList.value)">
+      <option *ngFor="let lang of languages()" (click)="languageChange.emit(lang)" [value]="lang">{{ lang }}</option>
+    </select>
+  </div>
 </nav>

@@ -13,6 +13,7 @@ import { expensesFeatureKey, expensesReducer, ExpensesEffects } from '@bt-libs/f
 import { provideEffects } from '@ngrx/effects';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@ngneat/transloco';
+import { provideTranslocoLocale } from '@ngneat/transloco-locale';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -36,6 +37,13 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader
     }),
+    provideTranslocoLocale({
+      langToLocaleMapping: {
+        en: 'en-US',
+        nl: 'nl-NL'
+      },
+      // localeToCurrencyMapping: {}
+    })
   ],
 };
 // MockInterceptor

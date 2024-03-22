@@ -1,6 +1,7 @@
 import { NavbarComponent, NavbarItem } from '@bt-libs/shared/common-components';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslationService } from './translation.serive';
 
 @Component({
   standalone: true,
@@ -10,5 +11,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  protected readonly translationService = inject(TranslationService);
+
   navItems: NavbarItem[] = [{ label: 'expenses approval', route: '/expenses-approval' }];
 }
