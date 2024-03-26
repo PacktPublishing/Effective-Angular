@@ -1,51 +1,54 @@
-<div class="container">
-  <div class="header">
-    <h1>Expenses Overview</h1>
-    <div class="actionButtons">
-      <div class="vatToggle">
-        <span>Incl. VAT:</span>
-        <label class="switch">
-          <input (click)="expensesFacade.adjustVat()" type="checkbox" [checked]="expensesFacade.inclVat()">
-          <span class="slider round"></span>
-        </label>
+<ng-container *transloco="let t; read: 'expenses_overview_page'">
+  <div class="container">
+    <div class="header">
+      <h1>{{ t('title') }}</h1>
+      <div class="actionButtons">
+        <div class="vatToggle">
+          <span>Incl. VAT:</span>
+          <label class="switch">
+            <input (click)="expensesFacade.adjustVat()" type="checkbox" [checked]="expensesFacade.inclVat()">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <button (click)="onSummaryChange()">{{summaryBtnText()}}</button>
+        <button (click)="showAddExpenseModal.set(true)">Add expense</button>
       </div>
-      <button (click)="onSummaryChange()">{{summaryBtnText()}}</button>
-      <button (click)="showAddExpenseModal.set(true)">Add expense</button>
     </div>
+    @if(expenses(); as expensesVm) {
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>VAT Percentage</th>
+        <th>Date</th>
+        <th>Tags</th>
+      </tr>
+      @for (expense of expensesVm.expenses; track expense.id){
+      <tr>
+        <td>{{ expense.description }}</td>
+        <td>{{ expense.amount.value.toFixed(2) | translocoCurrency }}</td>
+        <td>{{ expense.amount.vatPercentage }}%</td>
+        <td>{{ expense.date | translocoDate: { dateStyle: 'medium' } }}</td>
+        <td>
+          @for (tag of expense.tags; track tag){
+          <span class="tag" *ngIf="tag">{{tag}}</span>
+          }
+        </td>
+      </tr>
+      }
+      @if(showSummary()) {
+      <tr class="summary">
+        <td>Total: {{expensesVm.total}}</td>
+      </tr>
+      }
+    </table>
+    } @else {
+    Loading...
+    }
   </div>
-  @if(expenses(); as expensesVm) {
-  <table>
-    <tr>
-      <th>Description</th>
-      <th>Amount</th>
-      <th>VAT Percentage</th>
-      <th>Date</th>
-      <th>Tags</th>
-    </tr>
-    @for (expense of expensesVm.expenses; track expense.id){
-    <tr>
-      <td>{{ expense.description }}</td>
-      <td>{{ expense.amount.value.toFixed(2) | currency }}</td>
-      <td>{{ expense.amount.vatPercentage }}%</td>
-      <td>{{ expense.date | date:'dd MMM yyyy' }}</td>
-      <td>
-        @for (tag of expense.tags; track tag){
-        <span class="tag" *ngIf="tag">{{tag}}</span>
-        }
-      </td>
-    </tr>
-    }
-    @if(showSummary()) {
-    <tr class="summary">
-      <td>Total: {{expensesVm.total}}</td>
-    </tr>
-    }
-  </table>
-  } @else {
-  Loading...
-  }
-</div>
 
-<bt-libs-modal [shown]="showAddExpenseModal()" (shownChange)="showAddExpenseModal.set(false)" [title]="'Add expenses'">
-  <bt-libs-ui-add-expense-form #form (addExpense)="onAddExpense($event)" />
-</bt-libs-modal>
+  <bt-libs-modal [shown]="showAddExpenseModal()" (shownChange)="showAddExpenseModal.set(false)"
+    [title]="'Add expenses'">
+    <bt-libs-ui-add-expense-form #form (addExpense)="onAddExpense($event)" />
+  </bt-libs-modal>
+</ng-container>
