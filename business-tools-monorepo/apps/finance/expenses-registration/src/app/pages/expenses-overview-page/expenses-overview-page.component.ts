@@ -19,8 +19,6 @@ export default class ExpensesOverviewPageComponent implements OnInit {
   protected readonly expensesFacade = inject(ExpensesFacade);
   protected readonly translationService = inject(TranslationService);
 
-  x = 123456789.10
-
   translationEventsEffect = effect(() => {
     if (this.translationService.translationsLoaded()) {
       console.log('==>', this.translationService.translocoService.translate('expenses_overview_page.title'));
