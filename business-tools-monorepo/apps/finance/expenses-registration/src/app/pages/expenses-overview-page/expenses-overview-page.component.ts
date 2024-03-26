@@ -21,7 +21,7 @@ export default class ExpensesOverviewPageComponent implements OnInit {
 
   translationEventsEffect = effect(() => {
     if (this.translationService.translationsLoaded()) {
-      console.log('==>', this.translationService.translocoService.translate('expenses_overview_page.title'));
+      console.log(this.translationService.translocoService.translate('expenses_overview_page.title'));
     }
   });
 
