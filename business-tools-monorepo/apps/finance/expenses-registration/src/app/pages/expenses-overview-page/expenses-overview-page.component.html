@@ -10,7 +10,7 @@
             <span class="slider round"></span>
           </label>
         </div>
-        <button (click)="onSummaryChange()">{{summaryBtnText()}}</button>
+        <button data-test-id="show-summary-btn" (click)="onSummaryChange()">{{summaryBtnText()}}</button>
         <button (click)="showAddExpenseModal.set(true)">Add expense</button>
       </div>
     </div>
@@ -38,7 +38,7 @@
       }
       @if(showSummary()) {
       <tr class="summary">
-        <td>Total: {{expensesVm.total}}</td>
+        <td data-test-id="summary">Total: {{expensesVm.total}}</td>
       </tr>
       }
     </table>
