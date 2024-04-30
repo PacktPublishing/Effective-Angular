@@ -11,3 +11,4 @@ export * from './lib/widget-container/widet-tokens';
 export * from './lib/widget-container/widget-loaders';
 export * from './lib/defer-widget/defer-widget.component';
 export * from './lib/defer-widget/widgets.enum';
+export * from './lib/navbar/navbar.component.stub';

@@ -1,5 +1,5 @@
 <div class="pageContainer">
-  <bt-libs-navbar (languageChange)="translationService.translocoService.setActiveLang($event)" [navbarItems]="navItems"
-    [languages]="translationService.getLanguages()" />
+  <bt-libs-navbar [navbarItems]="navItems" [languages]="translationService.getLanguages()"
+    (languageChange)="translationService.setActiveLanguage($event)" />
   <router-outlet />
 </div>

@@ -1,12 +1,17 @@
-<nav>
+<nav data-test-id="nav-bar">
   <div>
-    <a *ngFor="let navbarItem of navbarItems()" [routerLink]="navbarItem.route" class="navbarItem">
+    @for (navbarItem of navbarItems(); track navbarItem.route; let i = $index) {
+    <a [attr.data-test-id]="'nav-item-' + i" [routerLink]="navbarItem.route" class="navbarItem">
       {{navbarItem.label}}
     </a>
+    }
   </div>
   <div>
-    <select #selectList (change)="languageChange.emit(selectList.value)">
-      <option *ngFor="let lang of languages()" (click)="languageChange.emit(lang)" [value]="lang">{{ lang }}</option>
+    <select #selectList data-test-id="lang-select" (change)="languageChange.emit(selectList.value)">
+      @for (lang of languages(); track lang) {
+      <option [attr.data-test-id]="'lang-item-' + lang" (click)="languageChange.emit(lang)" [value]="lang">{{ lang }}
+      </option>
+      }
     </select>
   </div>
 </nav>
