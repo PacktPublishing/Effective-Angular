@@ -2,8 +2,9 @@
   "name": "@business-tools/workspace-generators-plugin",
   "version": "0.0.1",
   "dependencies": {
-    "@nx/devkit": "16.6.0",
-    "tslib": "^2.3.0"
+    "@nx/devkit": "18.0.3",
+    "tslib": "^2.3.0",
+    "@nx/angular": "18.0.3"
   },
   "type": "commonjs",
   "main": "./src/index.js",

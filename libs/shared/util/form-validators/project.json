@@ -44,7 +44,8 @@
         "lintFilePatterns": [
           "libs/shared/util/form-validators/**/*.ts",
           "libs/shared/util/form-validators/**/*.html"
-        ]
+        ],
+        "fix": true
       }
     }
   }
