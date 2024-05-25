@@ -10,8 +10,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/finance/data-access/expenses/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/finance/data-access/expenses/ng-package.json"
       },
       "configurations": {
         "production": {
