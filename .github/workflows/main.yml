@@ -52,4 +52,4 @@ jobs:
         npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration --no-silent
       env:
         CI: true
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_PAGES }}
