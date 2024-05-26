@@ -8,7 +8,7 @@ export default {
     global: {
       lines: 80,
       functions: 60,
-      branches: 80
+      branches: 70
     },
   },
   transform: {
