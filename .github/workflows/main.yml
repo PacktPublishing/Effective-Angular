@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      
+
 # Jobs to run
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 20.1.0
-        
+
     # Setup pnpm
     - uses: pnpm/action-setup@v2
       with:
@@ -49,7 +49,7 @@ jobs:
     # Deploy the finance-expenses-registration to GitHub pages
     - name: Deploy to gh pages
       run: |
-        npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration --no-silent
+        npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_PAGES }}
