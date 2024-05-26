@@ -38,7 +38,7 @@ jobs:
 
     # Build finance-expenses-registration application
     - name: Build Angular App
-      run: pnpm nx build finance-expenses-registration --no-cloud --base-href /business-tools/
+      run: pnpm nx build finance-expenses-registration --no-cloud --base-href /Effective-Angular/
 
     # Setup Git on the VM
     - name: Set up Git
