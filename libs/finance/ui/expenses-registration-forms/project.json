@@ -10,8 +10,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/finance/ui/expenses-registration-forms/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/finance/ui/expenses-registration-forms/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -44,7 +43,8 @@
         "lintFilePatterns": [
           "libs/finance/ui/expenses-registration-forms/**/*.ts",
           "libs/finance/ui/expenses-registration-forms/**/*.html"
-        ]
+        ],
+        "fix": true
       }
     }
   }

@@ -4,6 +4,13 @@ export default {
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/apps/finance/expenses-registration',
+  coverageThreshold: {
+    global: {
+      lines: 80,
+      functions: 60,
+      branches: 80
+    },
+  },
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
