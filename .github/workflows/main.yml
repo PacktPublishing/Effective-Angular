@@ -34,7 +34,7 @@ jobs:
 
     # Unit testing finance-expenses-registration
     - name: Unit test finance-expenses-registration
-      run: pnpm nx run finance-expenses-registration:test
+      run: pnpm nx run finance-expenses-registration:test --no-cloud
 
     # Build finance-expenses-registration application
     - name: Build Angular App
