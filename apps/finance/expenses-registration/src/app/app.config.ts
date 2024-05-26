@@ -14,9 +14,11 @@ import { provideEffects } from '@ngrx/effects';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@ngneat/transloco';
 import { provideTranslocoLocale } from '@ngneat/transloco-locale';
+import { APP_BASE_HREF } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    { provide: APP_BASE_HREF, useValue: isDevMode() ? '' : '/Effective-Angular/' },
     provideStore(),
     provideState({ name: expensesFeatureKey, reducer: expensesReducer }),
     provideEffects(ExpensesEffects),
