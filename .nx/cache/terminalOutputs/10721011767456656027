@@ -1,0 +1,40 @@
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m [0m[7m[37m marketing-social-media-dashboard [39m[27m[0m [2mapps/marketing/social-media-dashboard/src/app/[22m[1mapp.component.spec.ts[22m ([0m[1m[41m7.799 s[49m[22m[0m)
+  AppComponent
+    [31m×[39m [2mshould render title (51 ms)[22m
+    [32m√[39m [2mshould have as title 'marketing-social-media-dashboard' (8 ms)[22m
+
+[1m[31m  [1m● [22m[1mAppComponent › should render title[39m[22m
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    [1mMatcher error[22m: [31mreceived[39m value must not be null nor undefined
+
+    Received has value: [31mundefined[39m
+[2m[22m
+[2m    [0m [90m 15 |[39m     fixture[33m.[39mdetectChanges()[33m;[39m[22m
+[2m     [90m 16 |[39m     [36mconst[39m compiled [33m=[39m fixture[33m.[39mnativeElement [36mas[39m [33mHTMLElement[39m[33m;[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 17 |[39m     expect(compiled[33m.[39mquerySelector([32m'h1'[39m)[33m?[39m[33m.[39mtextContent)[33m.[39mtoContain([22m
+[2m     [90m    |[39m                                                       [31m[1m^[22m[2m[39m[22m
+[2m     [90m 18 |[39m       [32m'Welcome marketing-social-media-dashboard'[39m[22m
+[2m     [90m 19 |[39m     )[33m;[39m[22m
+[2m     [90m 20 |[39m   })[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat [22m[2m[0m[36msrc/app/app.component.spec.ts[39m[0m[2m:17:55[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:411:30)[22m[2m[22m
+[2m      [2mat ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke ([22m[2m../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:300:43)[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:410:56)[22m[2m[22m
+[2m      [2mat Zone.Object.<anonymous>.Zone.run ([22m[2m../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:165:47)[22m[2m[22m
+[2m      [2mat Object.wrappedFunc ([22m[2m../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:789:34)[22m[2m[22m
+
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+[32;1mAll files          [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m app.component.html[0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m app.component.ts  [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+--------------------|---------|----------|---------|---------|-------------------
+[1mTest Suites: [22m[1m[31m1 failed[39m[22m, 1 total
+[1mTests:       [22m[1m[31m1 failed[39m[22m, [1m[32m1 passed[39m[22m, 2 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        11.283 s
+[2mRan all test suites[22m[2m.[22m

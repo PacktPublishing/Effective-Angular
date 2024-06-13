@@ -1,0 +1,19 @@
+[34mBuilding Angular Package[39m
+[37m[39m
+[37m------------------------------------------------------------------------------[39m
+[37mBuilding entry point '@bt-libs/finance/data-access/expenses'[39m
+[37m------------------------------------------------------------------------------[39m
+- Compiling with Angular sources in Ivy full compilation mode.
+[32m✔[39m Compiling with Angular sources in Ivy full compilation mode.
+Copying assets
+Writing package manifest
+Built @bt-libs/finance/data-access/expenses
+[32m[39m
+[32m------------------------------------------------------------------------------[39m
+[32mBuilt Angular Package[39m
+[32m - from: C:\Users\rober\OneDrive\Documenten\Programeer projecten\Effective-Angular\libs\finance\data-access\expenses[39m
+[32m - to:   C:\Users\rober\OneDrive\Documenten\Programeer projecten\Effective-Angular\dist\libs\finance\data-access\expenses[39m
+[32m------------------------------------------------------------------------------[39m
+[37m[37m[39m[37m[39m
+[37m[37mBuild at: [1m2024-05-25T16:53:50.408Z[22m - Time: [1m1630[22mms[39m[37m[39m
+[37m[37m[39m[37m[39m

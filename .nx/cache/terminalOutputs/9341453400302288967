@@ -1,0 +1,22 @@
+[0m[7m[1m[32m PASS [39m[22m[27m[0m [0m[7m[37m finance-ui-expenses-registration-forms [39m[27m[0m [2mlibs/finance/ui/expenses-registration-forms/src/lib/dynamic-form/[22m[1mdynamic-form.component.spec.ts[22m ([0m[1m[41m6.828 s[49m[22m[0m)
+[0m[7m[1m[32m PASS [39m[22m[27m[0m [0m[7m[37m finance-ui-expenses-registration-forms [39m[27m[0m [2mlibs/finance/ui/expenses-registration-forms/src/lib/add-expense/[22m[1madd-expense.component.spec.ts[22m ([0m[1m[41m7.269 s[49m[22m[0m)
+------------------------------|---------|----------|---------|---------|-------------------
+File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------------|---------|----------|---------|---------|-------------------
+[33;1mAll files                    [0m | [33;1m  56.25[0m | [31;1m       0[0m | [31;1m     20[0m | [33;1m  53.33[0m | [31;1m                 [0m 
+[33;1m add-expense                 [0m | [33;1m  52.94[0m | [31;1m       0[0m | [31;1m  16.66[0m | [33;1m     50[0m | [31;1m                 [0m 
+[32;1m  add-expense.component.html [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[33;1m  add-expense.component.ts   [0m | [33;1m     50[0m | [31;1m       0[0m | [31;1m  16.66[0m | [31;1m  46.66[0m | [31;1m42-46,65-74      [0m 
+[33;1m dynamic-form                [0m | [33;1m     60[0m | [31;1m       0[0m | [31;1m     25[0m | [33;1m  57.14[0m | [31;1m                 [0m 
+[32;1m  dynamic-form.component.html[0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[33;1m  dynamic-form.component.ts  [0m | [33;1m  57.14[0m | [31;1m       0[0m | [31;1m     25[0m | [33;1m  53.84[0m | [31;1m22-34            [0m 
+------------------------------|---------|----------|---------|---------|-------------------
+[1m[31mJest: "global" coverage threshold for branches (80%) not met: 0%[39m[22m
+[1m[31mJest: "global" coverage threshold for lines (80%) not met: 53.33%[39m[22m
+[1m[31mJest: "global" coverage threshold for functions (80%) not met: 20%[39m[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 total
+[1mTests:       [22m[1m[32m2 passed[39m[22m, 2 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        9.959 s
+[2mRan all test suites[22m[2m.[22m

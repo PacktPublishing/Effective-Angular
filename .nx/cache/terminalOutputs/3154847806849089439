@@ -1,0 +1,18 @@
+[0m[7m[1m[32m PASS [39m[22m[27m[0m [0m[7m[37m shared-util-common-pipes [39m[27m[0m [2mlibs/shared/util/common-pipes/src/lib/[22m[1mmultiply.pipe.spec.ts[22m
+  MultiplyPipe
+    [32m√[39m [2mcreate an instance (8 ms)[22m
+
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+[32;1mAll files        [0m | [32;1m     80[0m | [31;1m       0[0m | [31;1m      0[0m | [33;1m  66.66[0m | [31;1m                 [0m 
+[32;1m multiply.pipe.ts[0m | [32;1m     80[0m | [31;1m       0[0m | [31;1m      0[0m | [33;1m  66.66[0m | [31;1m9                [0m 
+------------------|---------|----------|---------|---------|-------------------
+[1m[31mJest: "global" coverage threshold for branches (80%) not met: 0%[39m[22m
+[1m[31mJest: "global" coverage threshold for lines (80%) not met: 66.66%[39m[22m
+[1m[31mJest: "global" coverage threshold for functions (80%) not met: 0%[39m[22m
+[1mTest Suites: [22m[1m[32m1 passed[39m[22m, 1 total
+[1mTests:       [22m[1m[32m1 passed[39m[22m, 1 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        5.646 s
+[2mRan all test suites[22m[2m.[22m

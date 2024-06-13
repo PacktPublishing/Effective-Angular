@@ -1,0 +1,71 @@
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m [0m[7m[37m finance-data-access-expenses [39m[27m[0m [2mlibs/finance/data-access/expenses/src/lib/stores/[22m[1mexpenses.store.spec.ts[22m
+  [1m● [22mTest suite failed to run
+
+    [96mlibs/finance/data-access/expenses/src/lib/stores/expenses.store.spec.ts[0m:[93m3[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"./expenses.store"' has no exported member 'ExpensesStoreService'.
+
+    [7m3[0m import { ExpensesStoreService } from './expenses.store';
+    [7m [0m [91m         ~~~~~~~~~~~~~~~~~~~~[0m
+
+[0m[7m[1m[32m PASS [39m[22m[27m[0m [0m[7m[37m finance-data-access-expenses [39m[27m[0m [2mlibs/finance/data-access/expenses/src/lib/services/[22m[1mexpenses.service.spec.ts[22m ([0m[1m[41m5.986 s[49m[22m[0m)
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m [0m[7m[37m finance-data-access-expenses [39m[27m[0m [2mlibs/finance/data-access/expenses/src/lib/facades/[22m[1mexpenses.facade.spec.ts[22m ([0m[1m[41m7.058 s[49m[22m[0m)
+[1m[31m  [1m● [22m[1mExpensesFacadeService › should be created[39m[22m
+
+    NullInjectorError: R3InjectorError(DynamicTestModule)[ExpensesFacade -> _Store -> _Store]: 
+      NullInjectorError: No provider for _Store!
+[2m[22m
+[2m    [0m [90m 10 |[39m })[22m
+[2m     [90m 11 |[39m [36mexport[39m [36mclass[39m [33mExpensesFacade[39m [36mimplements[39m [33mIExpensesFacade[39m {[22m
+[2m    [31m[1m>[22m[2m[39m[90m 12 |[39m   [36mprotected[39m readonly store [33m=[39m inject([33mStore[39m)[33m;[39m[22m
+[2m     [90m    |[39m                                    [31m[1m^[22m[2m[39m[22m
+[2m     [90m 13 |[39m   [36mprivate[39m readonly expensesEffects [33m=[39m inject([33mExpensesEffects[39m)[33m;[39m[22m
+[2m     [90m 14 |[39m[22m
+[2m     [90m 15 |[39m   expensesSignal [33m=[39m toSignal([36mthis[39m[33m.[39mstore[33m.[39mselect([33mExpenseSelectors[39m[33m.[39mselectExpenses)[33m,[39m { initialValue[33m:[39m [] })[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat NullInjector.get ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:5690:27)[22m[2m[22m
+[2m      [2mat R3Injector.get ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:6133:33)[22m[2m[22m
+[2m      [2mat R3Injector.get ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:6133:33)[22m[2m[22m
+[2m      [2mat injectInjectorOnly ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:1000:40)[22m[2m[22m
+[2m      [2mat ɵɵinject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:1006:42)[22m[2m[22m
+[2m      [2mat inject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:1090:12)[22m[2m[22m
+[2m      [2mat new ExpensesFacade ([22m[2msrc/lib/facades/expenses.facade.ts[2m:12:36)[22m[2m[22m
+[2m      [2mat Object.ExpensesFacade_Factory [as factory] ([22m[2m..\..\..\..\ng:\ExpensesFacade\ɵfac.js[2m:5:10)[22m[2m[22m
+[2m      [2mat [22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:6255:43[22m[2m[22m
+[2m      [2mat runInInjectorProfilerContext ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:956:9)[22m[2m[22m
+[2m      [2mat R3Injector.hydrate ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:6254:17)[22m[2m[22m
+[2m      [2mat R3Injector.get ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:6122:33)[22m[2m[22m
+[2m      [2mat _TestBedImpl.inject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/testing.mjs[2m:1884:52)[22m[2m[22m
+[2m      [2mat Function.inject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/testing.mjs[2m:1738:37)[22m[2m[22m
+[2m      [2mat [22m[2m[0m[36msrc/lib/facades/expenses.facade.spec.ts[39m[0m[2m:10:23[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:411:30)[22m[2m[22m
+[2m      [2mat ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:300:43)[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:410:56)[22m[2m[22m
+[2m      [2mat Zone.Object.<anonymous>.Zone.run ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:165:47)[22m[2m[22m
+[2m      [2mat Object.wrappedFunc ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:789:34)[22m[2m[22m
+
+------------------------|---------|----------|---------|---------|-------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------|---------|----------|---------|---------|-------------------
+[31;1mAll files              [0m | [31;1m   42.4[0m | [31;1m       0[0m | [31;1m    1.4[0m | [31;1m  41.66[0m | [31;1m                 [0m 
+[31;1m adapters              [0m | [31;1m  33.33[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m  33.33[0m | [31;1m                 [0m 
+[31;1m  expense.adapter.ts   [0m | [31;1m  33.33[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m  33.33[0m | [31;1m6-19             [0m 
+[31;1m facades               [0m | [31;1m  26.66[0m | [31;1m       0[0m | [31;1m   7.14[0m | [31;1m  21.42[0m | [31;1m                 [0m 
+[31;1m  expenses.facade.ts   [0m | [31;1m  26.66[0m | [31;1m       0[0m | [31;1m   7.14[0m | [31;1m  21.42[0m | [31;1m13-70            [0m 
+[32;1m http                  [0m | [32;1m  83.33[0m | [32;1m     100[0m | [31;1m      0[0m | [32;1m     80[0m | [31;1m                 [0m 
+[32;1m  expenses.http.ts     [0m | [32;1m  83.33[0m | [32;1m     100[0m | [31;1m      0[0m | [32;1m     80[0m | [31;1m12               [0m 
+[32;1m services              [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  expenses.service.ts  [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[31;1m state/expenses        [0m | [31;1m   42.6[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m  44.33[0m | [31;1m                 [0m 
+[32;1m  expenses.actions.ts  [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[31;1m  expenses.effects.ts  [0m | [31;1m   19.6[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m  17.02[0m | [31;1m12-85            [0m 
+[31;1m  expenses.reducer.ts  [0m | [31;1m     20[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m     20[0m | [31;1m15-96            [0m 
+[33;1m  expenses.selectors.ts[0m | [33;1m  61.53[0m | [32;1m     100[0m | [31;1m      0[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  index.ts             [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+------------------------|---------|----------|---------|---------|-------------------
+[1m[31mJest: "global" coverage threshold for branches (80%) not met: 0%[39m[22m
+[1m[31mJest: "global" coverage threshold for lines (80%) not met: 41.66%[39m[22m
+[1m[31mJest: "global" coverage threshold for functions (80%) not met: 1.4%[39m[22m
+[1mTest Suites: [22m[1m[31m2 failed[39m[22m, [1m[32m1 passed[39m[22m, 3 total
+[1mTests:       [22m[1m[31m1 failed[39m[22m, [1m[32m1 passed[39m[22m, 2 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        9.484 s
+[2mRan all test suites[22m[2m.[22m

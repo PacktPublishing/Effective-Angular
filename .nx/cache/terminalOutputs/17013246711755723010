@@ -1,0 +1,18 @@
+[0m[7m[1m[32m PASS [39m[22m[27m[0m [0m[7m[37m shared-util-form-validators [39m[27m[0m [2mlibs/shared/util/form-validators/src/lib/template-driven-validators/[22m[1mmax-word-count.directive.spec.ts[22m ([0m[1m[41m5.138 s[49m[22m[0m)
+  MaxWordCountDirective
+    [32m√[39m [2mshould create an instance (5 ms)[22m
+
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------------|---------|----------|---------|---------|-------------------
+[33;1mAll files                   [0m | [33;1m  71.42[0m | [31;1m       0[0m | [33;1m     50[0m | [33;1m  66.66[0m | [31;1m                 [0m 
+[33;1m max-word-count.directive.ts[0m | [33;1m  71.42[0m | [31;1m       0[0m | [33;1m     50[0m | [33;1m  66.66[0m | [31;1m15-16            [0m 
+-----------------------------|---------|----------|---------|---------|-------------------
+[1m[31mJest: "global" coverage threshold for branches (80%) not met: 0%[39m[22m
+[1m[31mJest: "global" coverage threshold for lines (80%) not met: 66.66%[39m[22m
+[1m[31mJest: "global" coverage threshold for functions (80%) not met: 50%[39m[22m
+[1mTest Suites: [22m[1m[32m1 passed[39m[22m, 1 total
+[1mTests:       [22m[1m[32m1 passed[39m[22m, 1 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        6.546 s
+[2mRan all test suites[22m[2m.[22m

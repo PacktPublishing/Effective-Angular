@@ -1,0 +1,124 @@
+[m]0;C:\WINDOWS\system32\cmd.exe[?25h[1m[2mDetermining test suites to run...[22m[K
+[K[1m
+Test Suites: [22m0 of 2 total[K[1m
+Tests:       [22m0 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        0 s, estimated 24 s[K[37m
+████████████████████████████████████████[K[m[?25l[6;1H[K
+[K
+[K
+[K
+[K
+[K[5;1H[?25h[?25l[33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[33m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[9;1HTest Suites: [22m0 of 2 total[1m
+Tests:       [22m0 total[1m
+Snapshots:   [22m0 total[1m
+Time:[22m        0 s, estimated 24 s[37m
+████████████████████████████████████████[?25h[m[?25l[33m[1m[7m[6;1H RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   [33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[22m[K
+[K[1m
+Test Suites: [22m0 of 2 total[K[1m
+Tests:       [22m0 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        1 s, estimated 24 s[K[32m
+█[37m███████████████████████████████████████[K[?25h[m[?25l[33m[1m[7m[6;1H RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   [33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[22m[K
+[K[1m
+Test Suites: [22m0 of 2 total[K[1m
+Tests:       [22m0 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        2 s, estimated 24 s[K[32m
+███[37m█████████████████████████████████████[K[?25h[m[?25l[33m[1m[7m[6;1H RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   [33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[22m[K
+[K[1m
+Test Suites: [22m0 of 2 total[K[1m
+Tests:       [22m0 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        3 s, estimated 24 s[K[32m
+█████[37m███████████████████████████████████[K[?25h[m[?25l[33m[1m[7m[6;1H RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   [33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[22m[K
+[K[1m
+Test Suites: [22m0 of 2 total[K[1m
+Tests:       [22m0 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        4 s, estimated 24 s[K[32m
+██████[37m██████████████████████████████████[K[?25h[m[?25l[33m[1m[7m[6;1H RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   [33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[22m[K
+[K[1m
+Test Suites: [22m0 of 2 total[K[1m
+Tests:       [22m0 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        5 s, estimated 24 s[K[32m
+████████[37m████████████████████████████████[K[?25h[m[?25l[32m[1m[7m[5;1H PASS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[22m
+[K[33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   [33m[1m[7m
+ RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/[22m[1mapp.component.spec.ts[22m[K
+[K[1m
+Test Suites: [22m0 of 2 total[K[1m
+Tests:       [22m0 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        5 s, estimated 24 s[K[32m
+████████[37m████████████████████████████████[K[?25h[m[?25l[33m[1m[7m[7;1H RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   
+[K[1m
+Test Suites: [32m1 passed[m, 1 of 2 total[K[1m
+Tests:       [32m2 passed[m, 2 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        5 s, estimated 24 s[K[32m
+████████[37m████████████████████████████████[K[m
+[K[13;41H[?25h[?25l[33m[1m[7m[7;1H RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   
+[K[1m
+Test Suites: [32m1 passed[m, 1 of 2 total[K[1m
+Tests:       [32m4 passed[m, 4 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        5 s, estimated 24 s[K[32m
+████████[37m████████████████████████████████[K[?25h[m[?25l[32m[1m[7m[6;1H PASS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m
+  [1m● [22mConsole[K
+[K
+    [2mconsole.log[22m[K
+      undefined[K
+[K[2m
+      at EffectHandle.log [as effectFn] (src/app/pages/expenses-overview-page/expenses-overview-page.component.ts:24:15)[22m[K
+[K
+    [2mconsole.log[22m[K
+      undefined[2m[17;1H      at EffectHandle.log [as effectFn] (src/app/pages/expenses-overview-page/expenses-overview-page.component.ts:24:15)[22m[19;1H    [2mconsole.log[22m
+      undefined[2m[22;1H      at EffectHandle.log [as effectFn] (src/app/pages/expenses-overview-page/expenses-overview-page.component.ts:24:15)
+[?25h[22m
+
+[33m[1m[7m RUNS [m [37m[7m finance-expenses-registration [m [2mapps/finance/expenses-registration/src/app/pages/expenses-overview-page/[22m[1mexpenses-overview-page.component.spec.ts[22m   [23;1H
+
+[1mTest Suites: [32m1 passed[m, 1 of 2 total[K
+[1mTests:       [32m4 passed[m, 4 total[K
+[1mSnapshots:   [22m0 total[K
+[1mTime:[22m        5 s, estimated 24 s[K
+[32m████████[37m████████████████████████████████[K[m[?25l[17;1H[K[1m
+Test Suites: [32m2 passed[m, 2 total[K[1m
+Tests:       [32m7 passed[m, 7 total[K[1m
+Snapshots:   [22m0 total[K[1m
+Time:[22m        5 s, estimated 24 s[K[32m
+████████[37m████████████████████████████████[K[m
+[K[22;41H[?25h[?25l[16;1H[K
+[K
+[K
+[K
+[K
+[K
+[K[16;1H[?25h----------------------------------------|---------|----------|---------|---------|-------------------
+File                                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------------------------------|---------|----------|---------|---------|-------------------[32m[1m
+All files[30X[m[30C | [32m[1m  88.88[m | [32m[1m     100[m | [32m[1m  64.28[m | [32m[1m   90.9[m | [31m[1m[17X[m[17C [33m[1m
+ app[35X[m[35C | [33m[1m  78.57[m | [32m[1m     100[m | [31m[1m  28.57[m | [32m[1m  81.81[m | [31m[1m[17X[m[17C [32m[1m
+  app.component.html[19X[m[19C | [32m[1m    100[m | [32m[1m     100[m | [32m[1m    100[m | [32m[1m    100[m | [33m[1m[17X[m[17C [32m[1m
+  app.component.ts[21X[m[21C | [32m[1m    100[m | [32m[1m     100[m | [32m[1m    100[m | [32m[1m    100[m | [33m[1m[17X[m[17C [33m[1m
+  translation.serive.ts[16X[m[16C | [33m[1m  53.84[m | [32m[1m     100[m | [31m[1m      0[m | [33m[1m  55.55[m | [31m[1m8-16[13X[m[13C 
+[32m[1m  transloco-testing.module.ts[m[10C | [32m[1m    100[m | [32m[1m     100[m | [32m[1m    100[m | [32m[1m    100[m | [33m[1m[17X[m[17C[K
+[32m[1m app/pages/expenses-overview-page      [m | [32m[1m    100[m | [32m[1m     100[m | [32m[1m    100[m | [32m[1m    100[m | [33m[1m[17X[m[17C[K
+[32m[1m  expenses-overview-page.component.html[m | [32m[1m    100[m | [32m[1m     100[m | [32m[1m    100[m | [32m[1m    100[m | [33m[1m[17X[m[17C[K
+[32m[1m  expenses-overview-page.component.ts  [m | [32m[1m    100[m | [32m[1m     100[m | [32m[1m    100[m | [32m[1m    100[m | [33m[1m[17X[m[17C[K
+----------------------------------------|---------|----------|---------|---------|-------------------
+
+[1mTest Suites: [32m2 passed[m, 2 total[K
+[1mTests:       [32m7 passed[m, 7 total[K
+[1mSnapshots:   [22m0 total[K
+[1mTime:[22m        5.984 s, estimated 24 s[K
+[2mRan all test suites.[22m[K

@@ -1,0 +1,1639 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.0.3",
+  "deps": {
+    "@angular/animations": "17.1.3",
+    "@angular/common": "17.1.3",
+    "@angular/compiler": "17.1.3",
+    "@angular/core": "17.1.3",
+    "@angular/forms": "17.1.3",
+    "@angular/platform-browser": "17.1.3",
+    "@angular/platform-browser-dynamic": "17.1.3",
+    "@angular/router": "17.1.3",
+    "@ngneat/transloco": "^6.0.4",
+    "@ngneat/transloco-locale": "^5.1.2",
+    "@ngrx/effects": "^17.1.0",
+    "@ngrx/store": "^17.1.0",
+    "@nx/angular": "18.0.3",
+    "@nx/devkit": "18.0.3",
+    "@nx/plugin": "18.0.3",
+    "@swc/helpers": "0.5.3",
+    "angular-cli-ghpages": "^2.0.0-beta.2",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "0.14.3",
+    "@angular-devkit/build-angular": "17.1.2",
+    "@angular-devkit/core": "17.1.2",
+    "@angular-devkit/schematics": "17.1.2",
+    "@angular-eslint/eslint-plugin": "17.0.1",
+    "@angular-eslint/eslint-plugin-template": "17.0.1",
+    "@angular-eslint/template-parser": "17.0.1",
+    "@angular/cli": "~17.1.0",
+    "@angular/compiler-cli": "17.1.3",
+    "@angular/language-service": "17.1.3",
+    "@global/styling": "file:libs/shared/global-styling",
+    "@nx/cypress": "18.0.3",
+    "@nx/eslint": "18.0.3",
+    "@nx/eslint-plugin": "18.0.3",
+    "@nx/jest": "18.0.3",
+    "@nx/js": "18.0.3",
+    "@nx/web": "18.0.3",
+    "@nx/workspace": "18.0.3",
+    "@schematics/angular": "17.1.2",
+    "@swc-node/register": "1.6.8",
+    "@swc/cli": "~0.1.62",
+    "@swc/core": "1.3.100",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.16.9",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "autoprefixer": "^10.4.0",
+    "cypress": "^13.0.0",
+    "eslint": "8.48.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-cypress": "2.13.4",
+    "eslint-plugin-deprecation": "^1.5.0",
+    "eslint-plugin-rxjs": "^5.0.3",
+    "eslint-plugin-rxjs-angular": "^2.0.1",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "13.1.4",
+    "jsonc-eslint-parser": "^2.1.0",
+    "ng-packagr": "17.1.2",
+    "nx": "18.0.3",
+    "postcss": "^8.4.5",
+    "postcss-import": "~14.1.0",
+    "postcss-preset-env": "~7.5.0",
+    "postcss-url": "~10.1.3",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.3.3",
+    "webpack-bundle-analyzer": "^4.10.2"
+  },
+  "pathMappings": {
+    "@bt-libs/finance/data-access/expenses": [
+      "libs/finance/data-access/expenses/src/index.ts"
+    ],
+    "@bt-libs/finance/ui/expenses-registration-forms": [
+      "libs/finance/ui/expenses-registration-forms/src/index.ts"
+    ],
+    "@bt-libs/shared/common-components": [
+      "libs/shared/ui/common-components/src/index.ts"
+    ],
+    "@bt-libs/shared/data-access/generic-http": [
+      "libs/shared/data-access/generic-http/src/index.ts"
+    ],
+    "@bt-libs/shared/ui/common-directives": [
+      "libs/shared/ui/common-directives/src/index.ts"
+    ],
+    "@bt-libs/shared/util/common-pipes": [
+      "libs/shared/util/common-pipes/src/index.ts"
+    ],
+    "@bt-libs/shared/util/custom-decorators": [
+      "libs/shared/util/custom-decorators/src/index.ts"
+    ],
+    "@bt-libs/shared/util/form-validators": [
+      "libs/shared/util/form-validators/src/index.ts"
+    ],
+    "@business-tools/workspace-generators-plugin": [
+      "libs/workspace-generators-plugin/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": ".env",
+        "hash": "6600483949216868430"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "2292012861835172998"
+      },
+      {
+        "file": ".github/workflows/main.yml",
+        "hash": "3556196086284005105"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4859207932113199490"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "11876177308363437206"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "13391140343975966684"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "6916052506221869644"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "2218471160319590391"
+      },
+      {
+        "file": "README.md",
+        "hash": "11378686891180771803"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "12858887768742306205"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "libs/shared/global-styling/form-control-status.scss",
+        "hash": "3852751279385803804"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "14701393047085893158"
+      },
+      {
+        "file": "nx.json",
+        "hash": "6050520902291187469"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7546233344704952193"
+      },
+      {
+        "file": "package.json",
+        "hash": "17439578561783982997"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "14914342248116191617"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "11810713488198132402"
+      },
+      {
+        "file": "transloco.config.js",
+        "hash": "3066414575376395152"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "76717973055030518"
+      }
+    ],
+    "projectFileMap": {
+      "finance-ui-expenses-registration-forms": [
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/.eslintrc.json",
+          "hash": "10176604793075771603"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/README.md",
+          "hash": "17026054535613700951"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/jest.config.ts",
+          "hash": "438951064380991384"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/ng-package.json",
+          "hash": "17365739175038685872"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/package.json",
+          "hash": "15492875962612939990",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/project.json",
+          "hash": "4043404022584482224"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/index.ts",
+          "hash": "14979924215062821573"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/add-expense/add-expense.component.html",
+          "hash": "12100399885522998781"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/add-expense/add-expense.component.scss",
+          "hash": "9629340611657789287"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/add-expense/add-expense.component.spec.ts",
+          "hash": "1336083859140477976",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/add-expense/add-expense.component.ts",
+          "hash": "10649526088176333497",
+          "deps": [
+            "finance-data-access-expenses",
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "shared-util-form-validators"
+          ]
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/add-expense/add-expense.interface.ts",
+          "hash": "13436472661633089645"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/dynamic-form/dynamic-control.interfaces.ts",
+          "hash": "17755223953881667705",
+          "deps": [
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/dynamic-form/dynamic-form.component.html",
+          "hash": "1816128098764339308"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/dynamic-form/dynamic-form.component.scss",
+          "hash": "9629340611657789287"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/dynamic-form/dynamic-form.component.spec.ts",
+          "hash": "1512390363948624082",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/lib/dynamic-form/dynamic-form.component.ts",
+          "hash": "3346320666879016454",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/finance/ui/expenses-registration-forms/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "finance-expenses-registration-e2e": [
+        {
+          "file": "apps/finance/expenses-registration-e2e/.eslintrc.json",
+          "hash": "282691817894889173"
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/cypress.config.ts",
+          "hash": "10128070837426886452",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/project.json",
+          "hash": "3802593919238901010"
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/src/e2e/expenses-registration.cy.ts",
+          "hash": "17722189952003540176"
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/src/fixtures/expenses.json",
+          "hash": "8317483559003677374"
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/src/support/commands.ts",
+          "hash": "11031723810997510506"
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/src/support/e2e.ts",
+          "hash": "15928825062325902088"
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/src/support/expenses-overview.po.ts",
+          "hash": "1281354795697881770"
+        },
+        {
+          "file": "apps/finance/expenses-registration-e2e/tsconfig.json",
+          "hash": "7855376766033435526"
+        }
+      ],
+      "shared-ui-common-components": [
+        {
+          "file": "libs/shared/ui/common-components/.eslintrc.json",
+          "hash": "757923607986424707"
+        },
+        {
+          "file": "libs/shared/ui/common-components/README.md",
+          "hash": "8709299268059400226"
+        },
+        {
+          "file": "libs/shared/ui/common-components/jest.config.ts",
+          "hash": "1967279927443040566"
+        },
+        {
+          "file": "libs/shared/ui/common-components/ng-package.json",
+          "hash": "3463227519976073213"
+        },
+        {
+          "file": "libs/shared/ui/common-components/package.json",
+          "hash": "14180539240970459410",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/project.json",
+          "hash": "11884805936487546858"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/index.ts",
+          "hash": "9951278126817330408"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/clock-widget/clock-widget.component.html",
+          "hash": "17537849330030034804"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/clock-widget/clock-widget.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/clock-widget/clock-widget.component.spec.ts",
+          "hash": "7909427373487167821",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/clock-widget/clock-widget.component.ts",
+          "hash": "13954407921013077929",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/defer-widget/defer-widget.component.html",
+          "hash": "12604642981454131120"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/defer-widget/defer-widget.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/defer-widget/defer-widget.component.spec.ts",
+          "hash": "4729691586829379873",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/defer-widget/defer-widget.component.ts",
+          "hash": "12765271704803873",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/defer-widget/widgets.enum.ts",
+          "hash": "14558572058018903128"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/display-scales/display-scales.component.html",
+          "hash": "15986046110247154360"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/display-scales/display-scales.component.scss",
+          "hash": "8330495458382505979"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/display-scales/display-scales.component.spec.ts",
+          "hash": "13125577088193400964",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/display-scales/display-scales.component.ts",
+          "hash": "649874393257486184",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/display-scales/scales-projection.directive.ts",
+          "hash": "6113681162593505963",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/modal/modal.component.html",
+          "hash": "14714698452316974606"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/modal/modal.component.scss",
+          "hash": "877406969259961109"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/modal/modal.component.spec.ts",
+          "hash": "12542246543894463858",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/modal/modal.component.ts",
+          "hash": "15249207601636426850",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/navbar/navbar.component.html",
+          "hash": "1142401228634285554"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/navbar/navbar.component.scss",
+          "hash": "1782168371124857044"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/navbar/navbar.component.spec.ts",
+          "hash": "8726804886280984777",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/navbar/navbar.component.stub.ts",
+          "hash": "2423058300280174947",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/navbar/navbar.component.ts",
+          "hash": "10488651828928889591",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/select/select.component.html",
+          "hash": "2530560299231081691"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/select/select.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/select/select.component.spec.ts",
+          "hash": "2583069230816401164",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/select/select.component.ts",
+          "hash": "7524186843833132676",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/selectable-label/selectable-label.component.html",
+          "hash": "12217278364448991986"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/selectable-label/selectable-label.component.scss",
+          "hash": "3148798672924097976"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/selectable-label/selectable-label.component.spec.ts",
+          "hash": "14795373837064396377",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/selectable-label/selectable-label.component.ts",
+          "hash": "9562106250380101770",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/animations"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/weather-widget/weather-widget.component.html",
+          "hash": "14432193080855429023"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/weather-widget/weather-widget.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/weather-widget/weather-widget.component.spec.ts",
+          "hash": "17304654897663419554",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/weather-widget/weather-widget.component.ts",
+          "hash": "3911659549807844728",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/widget-container/widet-tokens.ts",
+          "hash": "12138638645661367826",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/widget-container/widget-container.component.html",
+          "hash": "18118160395971731914"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/widget-container/widget-container.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/widget-container/widget-container.component.spec.ts",
+          "hash": "11878977237909244034",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/widget-container/widget-container.component.ts",
+          "hash": "18061721728914603615",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/lib/widget-container/widget-loaders.ts",
+          "hash": "10736642675469812844"
+        },
+        {
+          "file": "libs/shared/ui/common-components/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-components/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/shared/ui/common-components/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/ui/common-components/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/shared/ui/common-components/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "marketing-social-media-dashboard-e2e": [
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/.eslintrc.json",
+          "hash": "282691817894889173"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/cypress.config.ts",
+          "hash": "10128070837426886452",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/project.json",
+          "hash": "11095169331998301125"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/src/e2e/app.cy.ts",
+          "hash": "14004076426153761298"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/src/fixtures/example.json",
+          "hash": "17341819486505642070"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/src/support/app.po.ts",
+          "hash": "5364106453863571025"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/src/support/commands.ts",
+          "hash": "11031723810997510506"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/src/support/e2e.ts",
+          "hash": "15928825062325902088"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard-e2e/tsconfig.json",
+          "hash": "6436339741689812662"
+        }
+      ],
+      "finance-data-access-expenses": [
+        {
+          "file": "libs/finance/data-access/expenses/.eslintrc.json",
+          "hash": "4633627687371531496"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/README.md",
+          "hash": "11672151868778819125"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/jest.config.ts",
+          "hash": "5887905875351100188"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/ng-package.json",
+          "hash": "15582197906900812671"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/package.json",
+          "hash": "4234834657753523986",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/project.json",
+          "hash": "4105129267243593702"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/index.ts",
+          "hash": "986031350928228656"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/adapters/expense.adapter.ts",
+          "hash": "1431632753737932716",
+          "deps": [
+            "shared-data-access-generic-http"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/facades/expenses.facade.spec.ts",
+          "hash": "4333654191456404296",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/facades/expenses.facade.stub.ts",
+          "hash": "6079113615360341394",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/facades/expenses.facade.ts",
+          "hash": "4632606136178358895",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/facades/expensesFacade.interface.ts",
+          "hash": "6800883332855937098",
+          "deps": [
+            "npm:rxjs",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/http/expenses.http.ts",
+          "hash": "5812931376793663158",
+          "deps": [
+            "npm:@angular/core",
+            "shared-data-access-generic-http"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/models/expenses.interfaces.ts",
+          "hash": "15525784733655155459"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/services/expenses.service.spec.ts",
+          "hash": "10765530831976550465",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/services/expenses.service.ts",
+          "hash": "6746126200273131334",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/state/expenses/expenses.actions.ts",
+          "hash": "1158807775462261331",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/state/expenses/expenses.effects.ts",
+          "hash": "17388603421205924742",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/effects",
+            "npm:rxjs",
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/state/expenses/expenses.reducer.ts",
+          "hash": "12819119426849773734",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/state/expenses/expenses.selectors.ts",
+          "hash": "15491648917267227403",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/state/expenses/index.ts",
+          "hash": "7629679634845347470"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/stores/expenses.store.spec.ts",
+          "hash": "15648258615244844539",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/lib/stores/expenses.store.ts",
+          "hash": "1342476316786230702",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/finance/data-access/expenses/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/finance/data-access/expenses/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "workspace-generators-plugin": [
+        {
+          "file": "libs/workspace-generators-plugin/.eslintrc.json",
+          "hash": "7767932529770016782"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/README.md",
+          "hash": "4432913958999721798"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/generators.json",
+          "hash": "14340903474626922143"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/jest.config.ts",
+          "hash": "4589117668050259957"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/package.json",
+          "hash": "5870486766986045909",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:tslib",
+            "npm:@nx/angular"
+          ]
+        },
+        {
+          "file": "libs/workspace-generators-plugin/project.json",
+          "hash": "5226897481337902626"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-application/files/src/index.ts.template",
+          "hash": "8516815386028856332"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-application/generator.spec.ts",
+          "hash": "4681256104487433390",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-application/generator.ts",
+          "hash": "14111313480746401578",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@nx/angular"
+          ]
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-application/schema.d.ts",
+          "hash": "6728791511284655184"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-application/schema.json",
+          "hash": "7760871069136389948"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-library/files/src/index.ts.template",
+          "hash": "8516815386028856332"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-library/generator.spec.ts",
+          "hash": "13464636704101904351",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-library/generator.ts",
+          "hash": "1323775643485009222",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@nx/angular"
+          ]
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-library/schema.d.ts",
+          "hash": "8560166993107249163"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/generators/generate-angular-library/schema.json",
+          "hash": "4344336605915196558"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/src/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/tsconfig.json",
+          "hash": "11201535905583862240"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/tsconfig.lib.json",
+          "hash": "17512648156706774563"
+        },
+        {
+          "file": "libs/workspace-generators-plugin/tsconfig.spec.json",
+          "hash": "11194536110028348959"
+        }
+      ],
+      "marketing-social-media-dashboard": [
+        {
+          "file": "apps/marketing/social-media-dashboard/.eslintrc.json",
+          "hash": "6662827627630566996"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/jest.config.ts",
+          "hash": "5605152564639768198"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/project.json",
+          "hash": "2312976891734818017"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/app/app.component.html",
+          "hash": "16660521701194831472"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/app/app.component.spec.ts",
+          "hash": "18106293609796476466",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/app/app.component.ts",
+          "hash": "9366608684364548520",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/app/app.config.ts",
+          "hash": "15919682541520373330",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/app/app.routes.ts",
+          "hash": "12790378059371385261",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/index.html",
+          "hash": "9332673608102898733"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/main.ts",
+          "hash": "875041330523952236",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/styles.scss",
+          "hash": "2917954890128038984"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/src/test-setup.ts",
+          "hash": "10765977267162271731",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/tsconfig.app.json",
+          "hash": "1614784816589644118"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/tsconfig.editor.json",
+          "hash": "6816855480324741077"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/tsconfig.json",
+          "hash": "10480783485913150966"
+        },
+        {
+          "file": "apps/marketing/social-media-dashboard/tsconfig.spec.json",
+          "hash": "7652445452192956988"
+        }
+      ],
+      "shared-util-custom-decorators": [
+        {
+          "file": "libs/shared/util/custom-decorators/.eslintrc.json",
+          "hash": "15253755476724215054"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/README.md",
+          "hash": "16677389968486048209"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/jest.config.ts",
+          "hash": "12759036241356888649"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/ng-package.json",
+          "hash": "737853812338995376"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/package.json",
+          "hash": "9028630536549938922"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/project.json",
+          "hash": "1943451762524013091"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/src/func-logging.decorator.ts",
+          "hash": "5048302244367772784"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/src/index.ts",
+          "hash": "8052841797050688529"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/shared/util/custom-decorators/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "finance-expenses-registration": [
+        {
+          "file": "apps/finance/expenses-registration/.eslintrc.json",
+          "hash": "6662827627630566996"
+        },
+        {
+          "file": "apps/finance/expenses-registration/jest.config.ts",
+          "hash": "8744812385023367109"
+        },
+        {
+          "file": "apps/finance/expenses-registration/project.json",
+          "hash": "17928811222155665687"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/app.component.html",
+          "hash": "5081654178237181699"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/app.component.scss",
+          "hash": "1723268270652042758"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/app.component.spec.ts",
+          "hash": "15764684313025533865",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "shared-ui-common-components",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/app.component.ts",
+          "hash": "14611804709380833703",
+          "deps": [
+            "shared-ui-common-components",
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/app.config.ts",
+          "hash": "12185883878145904016",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/platform-browser",
+            "npm:@angular/common",
+            "shared-data-access-generic-http",
+            "npm:@ngrx/store",
+            "finance-data-access-expenses",
+            "npm:@ngrx/effects",
+            "npm:@ngneat/transloco",
+            "npm:@ngneat/transloco-locale"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/app.routes.ts",
+          "hash": "14893635283226152316",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/pages/expenses-approval-page/expenses-approval-page.component.html",
+          "hash": "716758004232186987"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/pages/expenses-approval-page/expenses-approval-page.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/pages/expenses-approval-page/expenses-approval-page.component.ts",
+          "hash": "1213703179597708567",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/pages/expenses-overview-page/expenses-overview-page.component.html",
+          "hash": "6279984505549387345"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/pages/expenses-overview-page/expenses-overview-page.component.scss",
+          "hash": "16850520993624802733"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/pages/expenses-overview-page/expenses-overview-page.component.spec.ts",
+          "hash": "8306868661181124577",
+          "deps": [
+            "npm:@angular/core",
+            "finance-data-access-expenses",
+            "npm:@ngneat/transloco-locale"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/pages/expenses-overview-page/expenses-overview-page.component.ts",
+          "hash": "4328718502649607756",
+          "deps": [
+            "finance-data-access-expenses",
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "finance-ui-expenses-registration-forms",
+            "shared-ui-common-components",
+            "npm:@ngneat/transloco",
+            "npm:@ngneat/transloco-locale"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/translation.serive.ts",
+          "hash": "688372559075253026",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngneat/transloco",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/transloco-loader.ts",
+          "hash": "15886229860847118069",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngneat/transloco",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/app/transloco-testing.module.ts",
+          "hash": "8496360054880187903",
+          "deps": [
+            "npm:@ngneat/transloco"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/assets/api/expenses.json",
+          "hash": "8317483559003677374"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/assets/i18n/en.json",
+          "hash": "17085591081792006973"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/assets/i18n/nl.json",
+          "hash": "17148618014253344651"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/index.html",
+          "hash": "11457176093997794372"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/main.ts",
+          "hash": "875041330523952236",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/styles.scss",
+          "hash": "16034895386544016936"
+        },
+        {
+          "file": "apps/finance/expenses-registration/src/test-setup.ts",
+          "hash": "10765977267162271731",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/finance/expenses-registration/tsconfig.app.json",
+          "hash": "7859282046545823368"
+        },
+        {
+          "file": "apps/finance/expenses-registration/tsconfig.editor.json",
+          "hash": "6816855480324741077"
+        },
+        {
+          "file": "apps/finance/expenses-registration/tsconfig.json",
+          "hash": "7694394979167298985"
+        },
+        {
+          "file": "apps/finance/expenses-registration/tsconfig.spec.json",
+          "hash": "7652445452192956988"
+        }
+      ],
+      "shared-ui-common-directives": [
+        {
+          "file": "libs/shared/ui/common-directives/.eslintrc.json",
+          "hash": "10176604793075771603"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/README.md",
+          "hash": "10340714886683565265"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/jest.config.ts",
+          "hash": "15177823802082390003"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/ng-package.json",
+          "hash": "7826075039792892962"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/package.json",
+          "hash": "9984715397142006453",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-directives/project.json",
+          "hash": "5749458968189979575"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/src/index.ts",
+          "hash": "12259614539250817982"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/src/lib/highlight.directive.spec.ts",
+          "hash": "12727413042809522711"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/src/lib/highlight.directive.ts",
+          "hash": "1629348946120810927",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-directives/src/lib/if-false.directive.spec.ts",
+          "hash": "5036351711796685343"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/src/lib/if-false.directive.ts",
+          "hash": "1399612541181154028",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-directives/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/common-directives/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/shared/ui/common-directives/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "shared-util-common-pipes": [
+        {
+          "file": "libs/shared/util/common-pipes/.eslintrc.json",
+          "hash": "10977354957807174960"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/README.md",
+          "hash": "15878637463425821884"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/jest.config.ts",
+          "hash": "10885412515778192975"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/ng-package.json",
+          "hash": "3478883420474887577"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/package.json",
+          "hash": "1935786781377032506",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/common-pipes/project.json",
+          "hash": "15307190708471819248"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/src/index.ts",
+          "hash": "15183095663850864644"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/src/lib/multiply.pipe.spec.ts",
+          "hash": "9543622759410999542"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/src/lib/multiply.pipe.ts",
+          "hash": "12269705643941725338",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/common-pipes/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/common-pipes/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/shared/util/common-pipes/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "shared-data-access-generic-http": [
+        {
+          "file": "libs/shared/data-access/generic-http/.eslintrc.json",
+          "hash": "7985061703623641086"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/README.md",
+          "hash": "9551400472565987788"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/jest.config.ts",
+          "hash": "979282908524160328"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/ng-package.json",
+          "hash": "6296706285383610592"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/package.json",
+          "hash": "2481832136951060182",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/project.json",
+          "hash": "11724360364492900323"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/src/generic-http.service.ts",
+          "hash": "3112510074893691005",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/src/index.ts",
+          "hash": "2993255996087293156"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/src/interceptors/mock.interceptor.ts",
+          "hash": "5400957743327442720",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/src/model-adapter.interface.ts",
+          "hash": "16378791607587283899"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/shared/data-access/generic-http/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ],
+      "shared-util-form-validators": [
+        {
+          "file": "libs/shared/util/form-validators/.eslintrc.json",
+          "hash": "10977354957807174960"
+        },
+        {
+          "file": "libs/shared/util/form-validators/README.md",
+          "hash": "11351031309516054857"
+        },
+        {
+          "file": "libs/shared/util/form-validators/jest.config.ts",
+          "hash": "15954563684445614373"
+        },
+        {
+          "file": "libs/shared/util/form-validators/ng-package.json",
+          "hash": "9786670051534361194"
+        },
+        {
+          "file": "libs/shared/util/form-validators/package.json",
+          "hash": "8022385289870533511",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util/form-validators/project.json",
+          "hash": "14733802857994737410"
+        },
+        {
+          "file": "libs/shared/util/form-validators/src/index.ts",
+          "hash": "13833631057186639535"
+        },
+        {
+          "file": "libs/shared/util/form-validators/src/lib/reactive-validators/max-word-count.function.ts",
+          "hash": "11537132624625839207",
+          "deps": [
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/shared/util/form-validators/src/lib/template-driven-validators/max-word-count.directive.spec.ts",
+          "hash": "2407971312465907337"
+        },
+        {
+          "file": "libs/shared/util/form-validators/src/lib/template-driven-validators/max-word-count.directive.ts",
+          "hash": "15193905734362945046",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/shared/util/form-validators/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shared/util/form-validators/tsconfig.json",
+          "hash": "10245856234250076786"
+        },
+        {
+          "file": "libs/shared/util/form-validators/tsconfig.lib.json",
+          "hash": "16735081882122979429"
+        },
+        {
+          "file": "libs/shared/util/form-validators/tsconfig.lib.prod.json",
+          "hash": "16219944552368449858"
+        },
+        {
+          "file": "libs/shared/util/form-validators/tsconfig.spec.json",
+          "hash": "6843333014879666704"
+        }
+      ]
+    }
+  }
+}

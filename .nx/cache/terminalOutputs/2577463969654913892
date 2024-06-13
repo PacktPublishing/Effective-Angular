@@ -1,0 +1,19 @@
+[34mBuilding Angular Package[39m
+[37m[39m
+[37m------------------------------------------------------------------------------[39m
+[37mBuilding entry point '@bt-libs/shared/common-components'[39m
+[37m------------------------------------------------------------------------------[39m
+- Compiling with Angular sources in Ivy full compilation mode.
+[32m✔[39m Compiling with Angular sources in Ivy full compilation mode.
+Copying assets
+Writing package manifest
+Built @bt-libs/shared/common-components
+[32m[39m
+[32m------------------------------------------------------------------------------[39m
+[32mBuilt Angular Package[39m
+[32m - from: C:\Users\rober\OneDrive\Documenten\Programeer projecten\Effective-Angular\libs\shared\ui\common-components[39m
+[32m - to:   C:\Users\rober\OneDrive\Documenten\Programeer projecten\Effective-Angular\dist\libs\shared\ui\common-components[39m
+[32m------------------------------------------------------------------------------[39m
+[37m[37m[39m[37m[39m
+[37m[37mBuild at: [1m2024-05-25T20:07:19.251Z[22m - Time: [1m2804[22mms[39m[37m[39m
+[37m[37m[39m[37m[39m

@@ -1,0 +1,63 @@
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m [0m[7m[37m shared-ui-common-directives [39m[27m[0m [2mlibs/shared/ui/common-directives/src/lib/[22m[1mhighlight.directive.spec.ts[22m ([0m[1m[41m6.412 s[49m[22m[0m)
+[1m[31m  [1m● [22m[1mHighlightDirective › should create an instance[39m[22m
+
+    NG0203: inject() must be called from an injection context such as a constructor, a factory function, a field initializer, or a function used with `runInInjectionContext`. Find more at https://angular.io/errors/NG0203
+[2m[22m
+[2m    [0m [90m 11 |[39m   [33m@[39m[33mInput[39m() textColor [33m=[39m [32m'white'[39m[33m;[39m[22m
+[2m     [90m 12 |[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 13 |[39m   [36mprivate[39m el [33m=[39m inject([33mElementRef[39m)[33m.[39mnativeElement[33m;[39m[22m
+[2m     [90m    |[39m                      [31m[1m^[22m[2m[39m[22m
+[2m     [90m 14 |[39m[22m
+[2m     [90m 15 |[39m   [36mprivate[39m originalColor [33m=[39m [32m'black'[39m[33m;[39m[22m
+[2m     [90m 16 |[39m   [36mprivate[39m originalBackground [33m=[39m [32m'white'[39m[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat injectInjectorOnly ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:993:15)[22m[2m[22m
+[2m      [2mat ɵɵinject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:1006:42)[22m[2m[22m
+[2m      [2mat inject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:1090:12)[22m[2m[22m
+[2m      [2mat new HighlightDirective ([22m[2msrc/lib/highlight.directive.ts[2m:13:22)[22m[2m[22m
+[2m      [2mat [22m[2m[0m[36msrc/lib/highlight.directive.spec.ts[39m[0m[2m:5:23[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:411:30)[22m[2m[22m
+[2m      [2mat ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:300:43)[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:410:56)[22m[2m[22m
+[2m      [2mat Zone.Object.<anonymous>.Zone.run ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:165:47)[22m[2m[22m
+[2m      [2mat Object.wrappedFunc ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:789:34)[22m[2m[22m
+
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m [0m[7m[37m shared-ui-common-directives [39m[27m[0m [2mlibs/shared/ui/common-directives/src/lib/[22m[1mif-false.directive.spec.ts[22m ([0m[1m[41m6.381 s[49m[22m[0m)
+[1m[31m  [1m● [22m[1mIfFalseDirective › should create an instance[39m[22m
+
+    NG0203: inject() must be called from an injection context such as a constructor, a factory function, a field initializer, or a function used with `runInInjectionContext`. Find more at https://angular.io/errors/NG0203
+[2m[22m
+[2m    [0m [90m  6 |[39m })[22m
+[2m     [90m  7 |[39m [36mexport[39m [36mclass[39m [33mIfFalseDirective[39m {[22m
+[2m    [31m[1m>[22m[2m[39m[90m  8 |[39m   [36mprivate[39m templateRef [33m=[39m inject([33mTemplateRef[39m)[33m;[39m[22m
+[2m     [90m    |[39m                               [31m[1m^[22m[2m[39m[22m
+[2m     [90m  9 |[39m   [36mprivate[39m viewContainer [33m=[39m inject([33mViewContainerRef[39m)[33m;[39m[22m
+[2m     [90m 10 |[39m[22m
+[2m     [90m 11 |[39m   [36mprivate[39m embeddedTemplateAdded [33m=[39m [36mfalse[39m[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat injectInjectorOnly ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:993:15)[22m[2m[22m
+[2m      [2mat ɵɵinject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:1006:42)[22m[2m[22m
+[2m      [2mat inject ([22m[2m../../../../node_modules/.pnpm/@angular+core@17.1.3_rxjs@7.8.1_zone.js@0.14.3/node_modules/@angular/core/fesm2022/core.mjs[2m:1090:12)[22m[2m[22m
+[2m      [2mat new IfFalseDirective ([22m[2msrc/lib/if-false.directive.ts[2m:8:31)[22m[2m[22m
+[2m      [2mat [22m[2m[0m[36msrc/lib/if-false.directive.spec.ts[39m[0m[2m:5:23[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:411:30)[22m[2m[22m
+[2m      [2mat ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:300:43)[22m[2m[22m
+[2m      [2mat _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:410:56)[22m[2m[22m
+[2m      [2mat Zone.Object.<anonymous>.Zone.run ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone.umd.js[2m:165:47)[22m[2m[22m
+[2m      [2mat Object.wrappedFunc ([22m[2m../../../../node_modules/.pnpm/zone.js@0.14.3/node_modules/zone.js/bundles/zone-testing.umd.js[2m:789:34)[22m[2m[22m
+
+------------------------|---------|----------|---------|---------|-------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------|---------|----------|---------|---------|-------------------
+[31;1mAll files              [0m | [31;1m  38.46[0m | [31;1m       0[0m | [31;1m     40[0m | [31;1m  33.33[0m | [31;1m                 [0m 
+[31;1m highlight.directive.ts[0m | [31;1m  42.85[0m | [32;1m     100[0m | [31;1m  33.33[0m | [31;1m  38.46[0m | [31;1m15-28            [0m 
+[31;1m if-false.directive.ts [0m | [31;1m  33.33[0m | [31;1m       0[0m | [33;1m     50[0m | [31;1m  27.27[0m | [31;1m9-19             [0m 
+------------------------|---------|----------|---------|---------|-------------------
+[1m[31mJest: "global" coverage threshold for branches (80%) not met: 0%[39m[22m
+[1m[31mJest: "global" coverage threshold for lines (80%) not met: 33.33%[39m[22m
+[1m[31mJest: "global" coverage threshold for functions (80%) not met: 40%[39m[22m
+[1mTest Suites: [22m[1m[31m2 failed[39m[22m, 2 total
+[1mTests:       [22m[1m[31m2 failed[39m[22m, 2 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        10.25 s
+[2mRan all test suites[22m[2m.[22m
