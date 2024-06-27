@@ -1,8 +1,10 @@
 # Effective Angular 
+<img src="https://m.media-amazon.com/images/I/718bDAx1U7L._SY522_.jpg" align="right" height="400"></a>
 
 This is the code repository for the [Effective Angular](https://www.amazon.com/dp/1805125532) book, published by Packt.
 
 Develop applications of any size by effectively using Angular with Nx, RxJS, NgRx, and Cypress
+
 
 
 ## What is this book about?
