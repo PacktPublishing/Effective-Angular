@@ -103,3 +103,7 @@ Targets can be defined in the `package.json` or `projects.json`. Learn more [in 
 
 Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provides autocomplete support, a UI for exploring and running tasks & generators, and more! Available for VSCode, IntelliJ and comes with a LSP for Vim users.
 
+## Errata
+If you have purchased the book, please note the following correction:
+* In some instances, where you see **»** in the code snippets, it should be replaced with **"** for correct syntax. We apologize for any confusion caused by this oversight.
+
