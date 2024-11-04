@@ -106,4 +106,23 @@ Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provid
 ## Errata
 If you have purchased the book, please note the following correction:
 * In some instances, where you see **»** in the code snippets, it should be replaced with **"** for correct syntax. We apologize for any confusion caused by this oversight.
+* Page 65, Second code snippet, instead of :
+  ```
+  export const navigateFn = () => (url: string) => inject(Router).
+  navigate([url]);
+  export class baseService {
+    protected _navigateFn = navigateFn();
+  }
+  ```
+  _it should be_
+  ```
+  export const navigateFn = () => {
+    const router = inject(Router);
+    return (url: stirng) => router.navigate([url]);
+  }
+
+  export class baseService {
+     protected _navigateFn = navigateFn();
+  }
+  ```
 
